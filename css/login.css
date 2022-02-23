@@ -1,0 +1,86 @@
+/* login */
+
+.login section{
+    display: flex;
+    height: 100vh;
+}
+.login-content{
+    width: 50vw;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-content .logo{
+    position: absolute;
+    top: 52px;
+    left: 70px;
+}
+.login-content .logo img{
+    width: 139px;
+}
+.login-bg{
+    width: 50vw;
+    height: 100%;
+    background: url("../images/visual/login-visual.png") no-repeat center right / cover;
+}
+.login-form h2{
+    font-size: 30px;
+    line-height: 1.53;
+    font-weight: 600;
+    margin-bottom: 46px;
+}
+
+.login-link-group{
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+    margin-bottom: 34px;
+    gap: 36px;
+}
+.login-link-group a{
+    font-size: 14px;
+    font-weight: 500;
+    color: #0B1F7D;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.3s ease;
+}
+.login-link-group a i{
+    width: 22px;
+    height: 22px;
+    background: url("../images/icons/ico-linkArrow.svg") no-repeat center / cover;
+}
+.login-link-group a:hover{
+    opacity: 0.6;
+}
+
+.full-strok-link{
+    width: 400px;
+    height: 60px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0B1F7D;
+    position: relative;
+    transition: 0.3s ease;
+}
+.full-strok-link i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 17px;
+    width: 22px;
+    height: 22px;
+    background: url("../images/icons/ico-linkArrow.svg") no-repeat center / cover;
+}
+.full-strok-link:hover{
+    opacity: 0.6;
+}
+
+/* login */

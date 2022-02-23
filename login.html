@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울대학교 교육협력센터</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <main class="login">
+        <section>
+            <div class="login-content">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./images/common/logo.svg" alt="logo">
+                    </a>
+                </h1>
+                <div class="login-form">
+                    <h2>
+                        서울대학교 교육협력센터
+                        <br>
+                        통합 로그인
+                    </h2>
+                    <form action="#" method="POST" id="login-form">
+                        <div class="col">
+                            <input class="id-input" type="text" placeholder="아이디를 입력해주세요.">
+                        </div>
+                        <div class="col">
+                            <!-- 
+                                비밀번호 정보 잘못됬을 시 pw-input에 클래스 fail 추가
+                                fail-text는 fail 클래스 추가해야 나오게 css 설정해놨습니다.
+                            -->
+                            <input class="pw-input fail" type="password" placeholder="비밀번호를 입력해주세요.">
+                            <button class="pw-view-btn" type="button">
+                                <i></i>
+                            </button>
+                            <span class="fail-text">로그인 정보를 확인해주세요</span>
+                        </div>
+                        <div class="spaceBetween mt">
+                            <div class="checkbox">
+                                <input type="checkbox" name="save-id" id="save-checkbox">
+                                <label for="save-checkbox">
+                                    <i></i>
+                                    아이디 저장
+                                </label>
+                            </div>
+                            <a href="#">
+                                비밀번호를 잊으셨나요?
+                            </a>
+                        </div>
+                        <button class="form-submit-btn">로그인</button>
+                    </form>
+                    <div class="login-link-group">
+                        <a href="#">
+                            학생 가입
+                            <i></i>
+                        </a>
+                        <a href="#">
+                            학부모 가입
+                            <i></i>
+                        </a>
+                        <a href="#">
+                            선생님 가입
+                            <i></i>
+                        </a>
+                    </div>
+                    <a href="#" class="full-strok-link">
+                        CEC 강사분이신가요?
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+            <div class="login-bg"></div>
+        </section>
+    </main>
+
+
+    <!-- script link -->
+    <script src="./js/passwordView.js"></script>
+</body>
+</html>

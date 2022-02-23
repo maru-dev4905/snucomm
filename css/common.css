@@ -1,0 +1,412 @@
+
+/* form common */
+
+form .col{
+    margin-top: 20px;
+    position: relative;
+}
+form .spaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+form input[type="text"],
+form input[type="password"]{
+    width: 400px;
+    height: 60px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #000;
+    outline: none;
+    transition: 0.3s ease;
+}
+form input::placeholder{
+    color: #999;
+}
+form input[type="text"]:focus,
+form input[type="password"]:focus{
+    border: 1px solid #0B1F7D !important;
+}
+form input.fail{
+    border: 1px solid #FF5647;
+}
+form input + .pw-view-btn + .fail-text{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF5647;
+    transition: 0.3s ease;
+}
+form input.fail + .pw-view-btn{
+    top: calc(50% - 10px);
+}
+form input.fail + .pw-view-btn + .fail-text{
+    margin-top: 6px;
+    opacity: 1;
+    visibility: visible;
+    height: 13px;
+}
+form button.pw-view-btn{
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 26px;
+    height: 26px;
+    transition: 0.3s ease;
+}
+form button.pw-view-btn i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/icons/ico-pwViewOpen.svg") no-repeat center / cover;
+    transition: 0.3s ease;
+}
+form button.pw-view-btn.active i{
+    background: url("../images/icons/ico-pwViewClose.svg") no-repeat center / cover;
+}
+
+form input[type="checkbox"]{
+    display: none;
+}
+form input[type="checkbox"] + label{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+form input[type="checkbox"] + label i{
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico-checkbox.svg") no-repeat center / cover;
+    transition: 0.2s ease;
+}
+form input[type="checkbox"]:checked + label i{
+    background: url("../images/icons/ico-checkboxActive.svg") no-repeat center / cover;
+}
+
+form a{
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+form a:hover{
+    opacity: 0.6;
+}
+
+form button.form-submit-btn{
+    width: 400px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B1F7D;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 48px;
+    transition: 0.3s ease;
+}
+form button.form-submit-btn:hover{
+    opacity: 0.8;
+}
+
+/* form common */
+
+
+
+
+/* header */
+
+body.scroll header{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10000000;
+    height: 100px;
+    background-color: #fff;
+    transition: 0.35s ease;
+}
+header .inner{
+    width: calc(100% - 144px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+header .logo-select-btn{
+    width: 32px;
+    height: 32px;
+}
+header .logo-select-btn i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/icons/ico-logoSelectArrow.svg") no-repeat center / cover;
+}
+header .logo-list{
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+header .logo-list.show{
+    opacity: 1;
+    visibility: visible;
+}
+header .logo-list li:first-child{
+    border-top: none;
+}
+header .logo-list li{
+    padding: 5px 0;
+    border-top: 1px solid #f0f0f0;
+}
+header .logo-list li button{
+    opacity: 0.6;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+header .logo-list li img{
+    width: 70%;
+}
+header .logo-list li button:hover{
+    opacity: 1;
+}
+
+header .gnb{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+header .gnb ul{
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+header .gnb ul li{
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.35s ease;
+    position: relative;
+}
+header .gnb ul li:hover{
+    opacity: 0.6;
+}
+header .gnb ul li.active{
+    color: #0EBCF6;
+}
+header .gnb ul li.active::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 5px;
+    height: 5px;
+    background-color: #0EBCF6;
+}
+header .sub-menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+header .search-btn{
+    display: flex;
+    align-items: center;
+}
+header .menu-open-btn{
+    display: flex;
+    align-items: center;
+}
+
+/* header */
+
+
+
+/* footer */
+
+footer{
+    border-top: 1px solid #ddd;
+    padding: 140px 0;
+    background: url("../images/visual/footer-bg.svg") no-repeat right bottom / 695px;
+}
+footer .inner{
+    width: calc(100% - 40px);
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+footer .footer-top{
+    display: flex;
+}
+footer .fnb{
+    margin-bottom: 145px;
+}
+footer .fnb a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #0EBCF6;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+footer .fnb li:last-child a{
+    margin-bottom: 0;
+}
+footer .fnb a img{
+    transition: 0.3s ease;
+    opacity: 0;
+    margin-top: 6px;
+}
+footer .fnb a:hover img{
+    opacity: 1;
+}
+footer .footer-content{
+    padding-left: 350px;
+}
+footer .footer-content h2{
+    font-size: 35px;
+    color: #0EBCF6;
+    margin-bottom: 32px;
+    font-family: "Montserrat";
+    font-weight: 800;
+}
+footer .footer-content ul{
+    display: flex;
+    gap: 78px;
+}
+footer .footer-content span{
+    font-size: 20px;
+    font-weight: 500;
+    color: #0EBCF6;
+    display: block;
+    margin-bottom: 16px;
+}
+footer .footer-content span::before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #0EBCF6;
+    margin-bottom: 16px;
+}
+footer .footer-content a{
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: #0EBCF6;
+    margin-bottom: 20px;
+    display: block;
+}
+footer .footer-content p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #0EBCF6;
+}
+footer .footer-bottom{
+    
+}
+footer .footer-bottom .footer-select-btn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0EBCF6;
+}
+footer .copyright{
+    font-size: 12px;
+    font-weight: 400;
+    color: #0EBCF6;
+    margin-top: 12px;
+}
+
+/* footer */
+
+
+
+/* page path */
+
+.page-path{
+    
+}
+.page-path .inner{
+    width: calc(100% - 40px);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-top: 160px;
+    display: flex;
+    align-items: center;
+}
+.page-path li{
+    font-size: 14px;
+    font-weight: 400;
+    color: #a0a0a0;
+    display: flex;
+    align-items: center;
+}
+.page-path li:before{
+    content: "";
+    display: flex;
+    align-items: center;
+    width: 4px;
+    height: 4px;
+    background-color: #c4c4c4;
+    margin: 2.5px 18px 0;
+    border-radius: 100%;
+}
+.page-path li:first-child::before{
+    display: none;
+}
+.page-path li:last-child{
+    color: #0EBCF6;
+    font-weight: 600;
+}
+
+/* page path */
+
+
+
+
+/* style */
+
+section .inner{
+    width: calc(100% - 40px);
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* style */
