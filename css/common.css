@@ -409,4 +409,109 @@ section .inner{
     margin: 0 auto;
 }
 
+.dim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    transition: 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.dim.show{
+    opacity: 1;
+    visibility: visible;
+}
+
 /* style */
+
+
+
+/* search-box */
+
+.search-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100000000;
+    background-color: #fff;
+    transition: 0.5s ease;
+    padding-bottom: 144px;
+    top: -100%;
+}
+.search-box.show{
+    top: 0;
+}
+.search-box .close-btn{
+    position: absolute;
+    top: 52px;
+    right: 68px;
+}
+.search-box form{
+    display: flex;
+    justify-content: center;
+    padding-top: 172px;
+}
+.search-box .col{
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.search-box input.search-input[type="text"]{
+    border: none !important;
+    font-size: 22px !important;
+    width: 100% !important;
+    height: 86px !important;
+    padding-left: 0 !important;
+    border-bottom: 1px solid #d2d2d2 !important;    
+}
+.search-box input.search-input[type="text"]:focus{
+    border: none !important;
+    border-bottom: 1px solid #0EBCF6 !important;
+}
+.search-box input::placeholder{
+    font-size: 22px;
+    color: #999;
+}
+.search-box .search-btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+.search-box .keyword-inner{
+    width: calc(100% - 40px);
+    max-width: 1024px;
+    margin: 36px auto 0;
+}
+.search-box .keyword{
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+}
+.search-box .keyword li a{
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #101010;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    background-color: #f6f6f6;
+    transition: 0.3s ease;
+}
+.search-box .keyword li a:hover{
+    opacity: 0.6;
+}
+
+/* search-box */
