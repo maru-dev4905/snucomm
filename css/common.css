@@ -205,11 +205,8 @@ header .logo-list li button:hover{
 }
 
 header .gnb{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
+    margin-right: auto;
+    margin-left: 130px;
 }
 header .gnb ul{
     display: flex;
@@ -260,6 +257,14 @@ header .sub-menu a.profile:hover{
     width: 196px;
     gap: 7px;
     padding: 0 26px;
+}
+header .sub-menu a.profile.main{
+    width: 196px;
+    gap: 7px;
+    padding: 0 26px;
+}
+header .sub-menu a.profile.main span{
+    opacity: 1;
 }
 
 header .sub-menu span{
