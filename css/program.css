@@ -61,3 +61,120 @@
 }
 
 /* program success */
+
+
+/* program request */
+
+.program-request-wrap{
+    padding: 100px 0 240px;
+}
+.program-request-wrap .inner{
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.program-request-wrap h2{
+    font-size: 23px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+.program-request-wrap .program-img{
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.program-request-wrap .program-desc{
+    background-color: #f6f6f6;
+    padding: 30px 50px;
+    margin-bottom: 36px;
+}
+.program-request-wrap .program-desc li{
+    display: flex;
+    margin-bottom: 20px;
+}
+.program-request-wrap .program-desc li:last-child{
+    margin-bottom: 0;
+}
+.program-request-wrap .program-desc li span{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9d9d9d;
+    min-width: 52px;
+    margin-right: 46px;
+}
+.program-request-wrap .program-desc p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin-top: -4px;
+}
+.program-request-form .col{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.program-request-form .col .form-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.program-request-form .col > span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #929292;
+    min-width: 100px;
+    display: inline-block;
+}
+.program-request-form .col > span em{
+    position: relative;
+}
+.program-request-form .col > span em::after{
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: -6px;
+    top: -3px;
+    background-color: #0EBCF6;
+}
+.program-request-form input{
+    height: 50px !important;
+    border-radius: 10px;
+    border: 1px solid #e9e9e9 !important;
+    outline: none;
+    transition: 0.3s ease;
+    padding: 0 20px;
+    width: 100%;
+}
+.program-request-form input[type="text"].name-input{
+    width: 500px;
+}
+.program-request-form input:focus{
+    border: 1px solid #0B1F7D !important;
+}
+.program-request-form .school-input{
+    width: 315px;
+}
+.program-request-form .program-request-btn{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #0EBCF6;
+    border-radius: 10px;
+    margin-top: 55px;
+    transition: 0.35s ease;
+}
+.program-request-form .program-request-btn:hover{
+    opacity: 0.6;
+}
+
+/* program request */

@@ -46,6 +46,7 @@ table {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
 }
 a{
     color: inherit;

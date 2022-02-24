@@ -88,20 +88,102 @@
                 </li>
             </ul>
         </div>
-        <section class="program-request-success-wrap">
+        <section class="program-request-wrap">
             <div class="inner">
-                <img src="./images/icons/ico-successBig.svg" alt="success">
-                <h2>
-                    프로그램 <span>신청이 완료</span>되었습니다.
-                </h2>
-                <p>아직 대기 접수 상태입니다. 잠시만 기다려주세요!</p>
-                <div class="success-text">
-                    <strong>[초등가족체육] SNU 플레이 투게더(A반: 초등 1~2학년)</strong>
-                </div>
-                <div class="link-group">
-                    <a href="#">홈으로</a>
-                    <a href="#">신청내역 보기</a>
-                </div>
+                <h2>[초등가족체육] SNU 플레이 투게더(A반: 초등 1~2학년)</h2>
+                <img class="program-img" src="./images/visual/program-visual01.png" alt="program visual">
+                <ul class="program-desc">
+                    <li>
+                        <span>
+                            <em>교육횟수</em>
+                        </span>
+                        <p>
+                            토요일 오후 2 - 5시, 주 1회 3시간, 총 3회. 1월 22일 / 
+                            <br>
+                            1월 29일 / 2월 5일
+                        </p>
+                    </li>
+                    <li>
+                        <span>
+                            <em>장</em>
+                            <em>소</em>
+                        </span>
+                        <p>
+                            남부교육장: 시흥캠퍼스 교육협력동 109호
+                        </p>
+                    </li>
+                    <li>
+                        <span>
+                            <em>신청기간</em>
+                        </span>
+                        <p>
+                            2022.12.16 - 01.19
+                        </p>
+                    </li>
+                    <li>
+                        <span>
+                            <em>교육기관</em>
+                        </span>
+                        <p>
+                            2022.01.22 - 02.05 
+                        </p>
+                    </li>
+                </ul>
+                <form action="#" method="POST" class="program-request-form">
+                    <div class="col">
+                        <span><em>이름</em></span>
+                        <div class="form-content">
+                            <input type="text" class="name-input">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span><em>학교명</em></span>
+                        <div class="form-content">
+                            <input type="text" class="school-input">
+                            <div class="select">
+                                <div class="select-current">
+                                    <span>1학년</span>
+                                    <img src="./images/icons/ico-selectArrow.svg" alt="select arrow">
+                                </div>
+                                <ul class="select-list">
+                                    <li>
+                                        <button type="button" class="select-item">1학년</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="select-item">2학년</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="select-item">3학년</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="select-item">4학년</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="select-item">5학년</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="select-item">6학년</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span><em>핸드폰 번호</em></span>
+                        <div class="form-content">
+                            <input type="tel" class="tel-input">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span><em>이메일</em></span>
+                        <div class="form-content">
+                            <input type="email" class="email-input">
+                        </div>
+                    </div>
+                    <button class="program-request-btn">
+                        프로그램 신청
+                    </button>
+                </form>
             </div>
         </section>
     </main>
@@ -206,6 +288,6 @@
     <!-- script link -->
     <script src="./js/searchOpen.js"></script>
     <script src="./js/scroll.js"></script>
-    <script src="./js/passwordView.js"></script>
+    <script src="./js/select.js"></script>
 </body>
 </html>
