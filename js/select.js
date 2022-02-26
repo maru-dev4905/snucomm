@@ -6,12 +6,18 @@ $(document).ready(function(){
     currentSelect.click(function(){
         var th = $(this);
 
-        console.log(th);
-
         if(th.parent().hasClass("show")){
             th.parent().removeClass("show");
         }else{
             th.parent().addClass("show");
         }
+    });
+
+    selectItem.click(function(){
+        var th = $(this);
+        var thText = th.text();
+        
+        th.closest(".select-list").prev().find("span").text(thText);
+        th.closest(".select").removeClass("show");
     });
 });

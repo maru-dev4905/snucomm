@@ -178,3 +178,112 @@
 }
 
 /* program request */
+
+
+
+/* program list */
+
+.program-list h2{
+    font-size: 38px;
+    color: #121212;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.program-list .program-list-img{
+    width: calc(100vw - 40px);
+    max-width: calc(100vw - 144px);
+    margin: 0 auto 92px;
+    display: block;
+}
+.program-list-filter{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E9E9E9;
+    margin-bottom: 20px;
+}
+.program-list-filter .filter-list{
+    display: flex;
+    gap: 50px;
+}
+.program-list-filter li.active a{
+    color: #0EBCF6;
+}
+.program-list-filter a{
+    font-size: 18px;
+    color: #C4C4C4;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.program-list-filter a:hover{
+    opacity: 0.6;
+}
+.program-list-filter .filter-content{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.program-list-filter .filter-content .toggle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+.program-list-filter .filter-content .toggle .toggle-content{
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #DDDDDD;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+.program-list-filter .filter-content .toggle .toggle-content .toggle-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s ease;
+}
+.program-list-filter .select{
+    width: 130px;
+}
+.program-list-filter .select-current{
+    border: none;
+    padding: 0;
+    height: 0;
+}
+.program-list-filter .filter-content .toggle.active .toggle-content{
+    background-color: #0EBCF6;
+}
+.program-list-filter .filter-content .toggle.active .toggle-btn{
+    left: 22px;
+}
+.program-list-filter .filter-content .toggle.active{
+    color: #0EBCF6;
+}
+
+.program-list-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.program-list-content li{
+    width: 100%;
+}
+.program-list-content .card{
+    box-shadow: none;
+    border:  1px solid #E9E9E9;
+}
+.program-list-content .card:hover{
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.03);
+}
+
+/* program list */
