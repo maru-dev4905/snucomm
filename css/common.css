@@ -21,6 +21,7 @@ form input[type="password"]{
     color: #000;
     outline: none;
     transition: 0.3s ease;
+    border-radius: 10px;
 }
 form input::placeholder{
     color: #999;

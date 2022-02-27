@@ -59,6 +59,23 @@
     padding-top: 246px;
 }
 
+.sticky-text{
+    position: fixed;
+    top: 50%;
+    left: -80px;
+    transform: rotate(-90deg) ;
+    transform-origin: center;
+    z-index: 1000000;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    transition: 0.3s ease;
+    opacity: 0;
+}
+.sticky-text.show{
+    opacity: 1;
+}
+
 /* style */
 
 
