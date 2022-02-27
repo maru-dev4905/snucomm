@@ -391,6 +391,7 @@
     margin-top: 58px;
     height: 2px !important;
     background-color: #E4E4E4 !important;
+    width: 100% !important;
 }
 .swiper-scrollbar-drag{
     background-color: #000 !important;
