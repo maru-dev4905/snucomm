@@ -4,7 +4,9 @@ $(document).ready(function(){
     var stateLine       = $(".state-line span");
     var slideCurrent    = $(".slide-state .current");
     var slideTotal      = $(".slide-state .total");
-    
+    var prevBtn         = $(".banner-slide-controller .prev-btn");
+    var nextBtn         = $(".banner-slide-controller .next-btn");
+
     var stateLineWidth  = stateLine.parent().css("width");
 
     var SLIDE_DURATION  = 10000;
@@ -26,8 +28,44 @@ $(document).ready(function(){
             th.removeClass("stop");
         }else{
             th.addClass("stop");
-            stateLine.stop()
+            stateLine.stop(true,false)
         }
+    });
+
+    nextBtn.click(function(){
+        
+        if(slideIndex == bannerSlide.length){
+            slideIndex = 1;
+            slideCurrent.text(1);
+
+        }else{
+            slideIndex++;
+            slideCurrent.text(slideIndex);
+        }
+        stateLine.css({
+            width:0
+        })
+        
+        bannerSlide.removeClass("active");
+        bannerSlide.eq(slideIndex - 1).addClass("active");
+    });
+
+    prevBtn.click(function(){
+        
+        if(slideIndex == 1){
+            slideIndex = bannerSlide.length;
+            slideCurrent.text(bannerSlide.length);
+
+        }else{
+            slideIndex--;
+            slideCurrent.text(slideIndex);
+        }
+        stateLine.css({
+            width:0
+        })
+        
+        bannerSlide.removeClass("active");
+        bannerSlide.eq(slideIndex - 1).addClass("active");
     });
 
     function slide(){

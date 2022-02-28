@@ -300,6 +300,21 @@ header .menu-open-btn{
     display: flex;
     align-items: center;
 }
+header .join-state-bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ddd;
+}
+header .join-state-bar span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #0B1F7D;
+    height: 3px;
+}
 
 /* header */
 
@@ -403,6 +418,30 @@ footer .copyright{
     color: #0EBCF6;
     margin-top: 12px;
 }
+.footer-select-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: #0EBCF6;
+    font-weight: 400;
+    margin-top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 0;
+    transition: 0.3s ease;
+}
+.footer-select-btn.active + .footer-select-content{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 15px;
+}
+.footer-select-btn img{
+    transition: 0.3s ease;
+}
+.footer-select-btn.active img{
+    transform: rotate(180deg);
+}
 
 /* footer */
 
@@ -412,6 +451,9 @@ footer .copyright{
 
 .page-path{
     
+}
+.programList .page-path .inner{
+    padding-top: 260px;
 }
 .page-path .inner{
     width: calc(100% - 40px);
@@ -432,18 +474,30 @@ footer .copyright{
     content: "";
     display: flex;
     align-items: center;
-    width: 4px;
-    height: 4px;
-    background-color: #c4c4c4;
+    width: 30px;
+    height: 1px;
+    background-color: #ABABAB;
     margin: 2.5px 18px 0;
-    border-radius: 100%;
 }
 .page-path li:first-child::before{
+    display: none;
+}
+.page-path li:last-child::before{
     display: none;
 }
 .page-path li:last-child{
     color: #0EBCF6;
     font-weight: 600;
+}
+.page-path-btn{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #E9E9E9;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14px;
 }
 
 /* page path */
@@ -637,7 +691,7 @@ section .inner{
 /* card */
 
 .swiper-slide.card{
-    width: 300px !important;
+    width: 330px !important;
     height: 328px !important;
 }
 .grid.card{
@@ -677,7 +731,7 @@ section .inner{
     margin-bottom: 62px;
 }
 .card .dDay{
-    padding: 6px 17px;
+    padding: 9px 17px;
     border-radius: 8px;
     background-color: #0EBCF6;
     color: #fff;
@@ -736,7 +790,7 @@ section .inner{
     bottom: -265px;
     bottom: -250px;
     left: 50%;
-    background: #0af;
+    background: #0EBCF6;
     width: 265px;
     height: 265px;
     transform: translateX(-50%);
@@ -889,10 +943,12 @@ section .inner{
 .menu-box > ul{
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 380px;
+    position: relative;
 }
 .menu-box > ul > li{
-    position: relative;
+    opacity: 0.6;
+    transition: 0.3s ease;
 }
 .menu-box > ul > li:hover ul{
     opacity: 1;
@@ -900,19 +956,19 @@ section .inner{
 }
 .menu-box > ul > li > a{
     color: #fff;
-    opacity: 0.6;
     padding-bottom: 34px;
     font-size: 30px;
     font-weight: 600;
     transition: 0.3s ease;
     display: block;
 }
-.menu-box > ul > li > a:hover{
+.menu-box > ul > li:hover{
     opacity: 1;
 }
 .menu-box > ul > li > a + ul{
     position: absolute;
     right: -142px;
+    right: 0;
     top: 10px;
     opacity: 0;
     visibility: hidden;
@@ -951,6 +1007,7 @@ section .inner{
     right: 0;
     width: 474px;
     z-index: 0;
+    border-radius: 200px 0 0 0 ;
 }
 
 .menu-sub{

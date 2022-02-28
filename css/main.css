@@ -81,6 +81,15 @@
 
 /* main banner */
 
+.banner .circle{
+    position: absolute;
+    left: -300px;
+    bottom: 164px;
+    width:  422px;
+    height: 422px;
+    border-radius: 100%;
+    background-color: #0EBCF6;
+}
 .banner{
     height: 100vh;
     padding-top: 100px;
@@ -196,6 +205,23 @@
 .banner-slide .controller p{
     font-size: 13px;
     font-weight: 400;
+}
+.banner-slide-controller .banner-btn{
+    display: flex;
+    gap: 10px;
+}
+.banner-slide-controller .banner-btn button{
+    width: 42px;
+    height: 42px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.3s ease;
+}
+.banner-slide-controller .banner-btn button:hover{
+    opacity: 0.4;
 }
 
 /* main banner */
@@ -607,9 +633,21 @@
     background-color: #F6F6F6;
     position: relative;
 }
+.community::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: calc(100% - 180px);
+    top: 0;
+    left: 0;
+    background-color: #F6F6F6;
+    z-index: 1000;
+}
 .community .inner{
     width: calc(100% - 40px);
     max-width:1434px;
+    display: flex;
+    align-items: center;
 }
 .community .sec-text{
     min-width: 486px;
@@ -618,13 +656,12 @@
     z-index: 1000;
 }
 .community .inner{
-    display: flex;
-    align-items: center;
 }
 .community .community-slide{
     padding-top: 40px;
-    /* overflow: visible !important; */
+    overflow: visible !important;
     transform: translateY(26px);
+    width: 948px !important;
 }
 .community .community-banner{
     position: absolute;

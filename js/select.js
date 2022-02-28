@@ -19,5 +19,6 @@ $(document).ready(function(){
         
         th.closest(".select-list").prev().find("span").text(thText);
         th.closest(".select").removeClass("show");
+        currentSelect.css("color","#000")
     });
 });

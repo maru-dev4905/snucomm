@@ -3,6 +3,7 @@
 .program-request-success-wrap{
     padding: 100px 0 200px;
     text-align: center;
+    margin-top: 200px;
 }
 .program-request-success-wrap h2{
     margin: 42px 0 18px;
@@ -203,6 +204,7 @@
     padding-bottom: 30px;
     border-bottom: 1px solid #E9E9E9;
     margin-bottom: 20px;
+    padding-top: 7px;
 }
 .program-list-filter .filter-list{
     display: flex;
@@ -647,7 +649,7 @@
     z-index: 0;
 }
 .program-detail-desc .content.teacher li span{
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: 8px;
     color: #0EBCF6;
     font-weight: 400;

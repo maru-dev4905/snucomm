@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울대학교 교육협력센터</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="./images/common/logo.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <div class="join-state-bar">
+            <span style="width:30%"></span>
+        </div>
+    </header>
+    <main class="join">
+        <section>
+            <div class="inner">
+                <h2>CEC 회원가입</h2>
+                <h3>
+                    <span class="fc-blue">자녀1 </span>
+                    정보 입력
+                    <p>
+                        <span class="current">3</span>
+                        /
+                        <span class="total">5</span>
+                    </p>
+                </h3>
+                <form action="#" method="post" id="joinForm">
+                    <div class="col">
+                        <span>이름</span>
+                        <input type="text" class="name-input" placeholder="이름을 입력하세요.">
+                    </div>
+                    <div class="col">
+                        <span>학교명</span>
+                        <input type="text" class="school-input" placeholder="학교명을 입력하세요.">
+                    </div>
+                    <div class="col">
+                        <span>교육과정</span>
+                        <div class="select">
+                            <div class="select-current fail">
+                                <span>교육과정을 알려주세요.</span>
+                                <img src="./images/icons/ico-selectArrow.svg" alt="select arrow">
+                            </div>
+                            <ul class="select-list">
+                                <li>
+                                    <button type="button" class="select-item">교육1</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">교육2</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">교육3</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">교육4</button>
+                                </li>
+                            </ul>
+                            <p class="fail-text">
+                                입력하지 않은 정보가 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span>학년</span>
+                        <div class="select">
+                            <div class="select-current">
+                                <span>학년을 입력하세요.</span>
+                                <img src="./images/icons/ico-selectArrow.svg" alt="select arrow">
+                            </div>
+                            <ul class="select-list">
+                                <li>
+                                    <button type="button" class="select-item">1학년</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">2학년</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">3학년</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">4학년</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">5학년</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="select-item">6학년</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <a href="#">이전</a>
+                        <button>
+                            자녀2 정보 입력
+                            <img src="./images/icons/ico-rightWhiteArrow.svg" alt="right arrow">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>ⓒ SNU CEC</p>
+    </footer>
+
+
+    <!-- script link -->
+    <script src="./js/passwordView.js"></script>
+    <script src="./js/select.js"></script>
+</body>
+</html>

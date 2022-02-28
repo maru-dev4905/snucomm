@@ -94,3 +94,144 @@
 }
 
 /* login */
+
+
+
+
+/* join */
+
+.join .inner{
+    width: calc(100% - 40px);
+    max-width: 520px;
+    padding-top: 340px;
+}
+.join h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #0B1F7D;
+}
+.join h3{
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+.join h3 span.fc-blue{
+    margin-right: 6px;
+    color: #0B1F7D;
+}
+.join h3 p{
+    padding-left: 14px;
+    font-size: 16px;
+    color: #acacac;
+    font-weight: 400;
+    display: flex;
+}
+.join h3 p .current{
+    color: #0B1F7D;
+    font-weight: 700;
+}
+.join form .col{
+    margin-top: 30px;
+}
+.join form .col > span{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #121212;
+    margin-bottom: 10px;
+}
+.join form .col input{
+    width: 100%;
+}
+.join form .select{
+    width: 100%;
+}
+.join form .select-current + .select-list + p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF5647;
+    margin-top: 15px;
+    margin-top: 0;
+    transition: 0.3s ease;
+    margin-left: 6px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+.join form .select-current.fail{
+    border: 1px solid #FF5647;
+}
+.join form .select-current.fail + .select-list{
+    top: calc(100% - 50px);
+}
+.join form .select-current.fail + .select-list + p{
+    margin-top: 15px;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+.join form .select-current{
+    height: 60px;
+    font-size: 15px;
+    color: #999;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+.join form .col:nth-child(1){z-index: 50;}
+.join form .col:nth-child(2){z-index: 40;}
+.join form .col:nth-child(3){z-index: 30;}
+.join form .col:nth-child(4){z-index: 20;}
+.join form .col:nth-child(5){z-index: 10;}
+
+.join form .col:last-child{
+    display: flex;
+    gap: 16px;
+}
+.join form .col:last-child a{
+    flex: 1;
+    font-size: 15px;
+    color: #0B1F7D;
+    font-weight: 400;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+}
+.join form .col:last-child button{
+    flex: 3;
+    height: 60px;
+    background-color: #0B1F7D;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.join form .col:last-child button img{
+    position: absolute;
+    right: 29px;
+}
+.join form .col:last-child button:hover{
+    opacity: 0.8;
+}
+
+.join + footer{
+    background: none;
+    border: none;
+    padding-top: 192px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* join */
