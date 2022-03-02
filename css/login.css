@@ -22,7 +22,7 @@
     left: 70px;
 }
 .login-content .logo img{
-    width: 139px;
+    width: 160px;
 }
 .login-bg{
     width: 50vw;
@@ -79,6 +79,7 @@
     color: #0B1F7D;
     position: relative;
     transition: 0.3s ease;
+    border-radius: 10px;
 }
 .full-strok-link i{
     position: absolute;

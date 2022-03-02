@@ -6,11 +6,16 @@ $(document).ready(function(){
     currentSelect.click(function(){
         var th = $(this);
 
-        if(th.parent().hasClass("show")){
-            th.parent().removeClass("show");
+        if(th.closest(".select").hasClass("readonly")){
+            return false;
         }else{
-            th.parent().addClass("show");
+            if(th.parent().hasClass("show")){
+                th.parent().removeClass("show");
+            }else{
+                th.parent().addClass("show");
+            }
         }
+
     });
 
     selectItem.click(function(){

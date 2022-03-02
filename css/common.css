@@ -33,6 +33,16 @@ form input[type="password"]:focus{
 form input.fail{
     border: 1px solid #FF5647;
 }
+.fail-text{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF5647;
+    transition: 0.3s ease;
+}
 form input + .pw-view-btn + .fail-text{
     opacity: 0;
     visibility: hidden;
@@ -116,6 +126,7 @@ form button.form-submit-btn{
     font-weight: 600;
     margin-top: 48px;
     transition: 0.3s ease;
+    border-radius: 10px;
 }
 form button.form-submit-btn:hover{
     opacity: 0.8;
@@ -314,6 +325,10 @@ header .join-state-bar span{
     bottom: 0;
     background-color: #0B1F7D;
     height: 3px;
+}
+
+.myPage-header{
+    background-color: #0B1F7D;
 }
 
 /* header */
@@ -633,6 +648,14 @@ section .inner{
     position: relative;
     width: 156px;
 }
+.select.readonly .select-current{
+    background-color: #f6f6f6;
+    color: #aaa;
+}
+.select.readonly .select-current img{
+    display: none;
+}
+
 .select-current{
     width: 100%;
     height: 52px;

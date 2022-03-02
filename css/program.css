@@ -81,7 +81,7 @@
     margin-bottom: 26px;
 }
 .program-request-wrap .program-img{
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 .program-request-wrap .program-desc{
@@ -117,6 +117,31 @@
     display: flex;
     align-items: center;
     margin-top: 0;
+}
+form.program-request-form input[type="text"]:focus, 
+form.program-request-form input[type="password"]:focus,
+form.program-request-form input[type="tel"]:focus,
+form.program-request-form input[type="email"]:focus{
+    border: 1px solid #0EBCF6 !important;
+}
+form.program-request-form input + .fail-text{
+    position: absolute;
+    bottom: 5px;
+}
+form.program-request-form input.fail{
+    margin-bottom: 15px;
+    border: 1px solid #FF5647 !important;
+}
+form.program-request-form input.fail + .fail-text{
+    opacity: 1;
+    visibility: visible;
+}
+form.program-request-form input[readonly]{
+    background-color: #F6F6F6;
+    color: #aaa;
+}
+form.program-request-form input[readonly]:focus{
+    border: 1px solid #F6F6F6 !important;
 }
 .program-request-form .col .form-content{
     display: flex;

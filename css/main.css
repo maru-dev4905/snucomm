@@ -616,10 +616,24 @@
     border: 1px solid #fff;
     margin: 0 auto;
     transition: 0.35s ease;
+    border-radius: 40px;
+    padding-right: 0;
+    position: relative;
 }
 .small-banner a:hover{
-    background-color: #fff;
-    color: #000;
+    padding-right: 50px;
+    color: #fff;
+    background-color: #0EBCF6;
+    border: 1px solid #0EBCF6;
+}
+.small-banner a img{
+    position: absolute;
+    right: 22px;
+    transition: 0.35s ease;
+    opacity: 0;
+}
+.small-banner a:hover img{
+    opacity: 1;
 }
 
 /* main small-banner */
@@ -629,9 +643,11 @@
 /* main community */
 
 .community{
-    padding: 140px 0 180px;
+    padding-top: 140px;
     background-color: #F6F6F6;
     position: relative;
+    overflow: hidden;
+    padding-bottom: 230px;
 }
 .community::before{
     content: "";
@@ -655,7 +671,9 @@
     position: relative;
     z-index: 1000;
 }
-.community .inner{
+.community .inner:last-child{
+    /* margin-top: 80px; */
+    /* padding-bottom: 180px; */
 }
 .community .community-slide{
     padding-top: 40px;
@@ -663,7 +681,10 @@
     transform: translateY(26px);
     width: 948px !important;
 }
-.community .community-banner{
+.community-banner-sec{
+    position: relative;
+}
+.community-banner-sec .community-banner{
     position: absolute;
     height: 230px;
     width: calc(100% - 40px);
@@ -678,31 +699,31 @@
     align-items: center;
     padding: 0 48px;
 }
-.community .community-banner .banner-text{
+.community-banner-sec .community-banner .banner-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     margin-bottom: 0;
 }
-.community .community-banner .banner-text h3{
+.community-banner-sec .community-banner .banner-text h3{
     font-size: 30px;
     color: #fff;
     font-weight: 400;
 }
-.community .community-banner .banner-text h3 span{
+.community-banner-sec .community-banner .banner-text h3 span{
     font-weight: 600;
 }
-.community .community-banner .banner-text p{
+.community-banner-sec .community-banner .banner-text p{
     font-size: 18px;
     color: #fff;
     margin-top: 20px;
 }
-.community .community-banner .banner-link{
+.community-banner-sec .community-banner .banner-link{
     display: flex;
     gap: 18px;
 }
-.community .community-banner .banner-link a{
+.community-banner-sec .community-banner .banner-link a{
     font-size: 16px;
     font-weight: 600;
     color: #555;
@@ -714,7 +735,7 @@
     padding: 16px 26px;
     transition: 0.3s ease;
 }
-.community .community-banner .banner-link a:hover{
+.community-banner-sec .community-banner .banner-link a:hover{
     background-color: #555;
     color: #fff;
 }
