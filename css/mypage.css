@@ -49,6 +49,19 @@
     text-align: center;
     margin: 0 auto;
 }
+.mypage-profile .img-wrap{
+    width: 114px;
+    height: 114px;
+    border-radius: 100%;
+    border: 4px solid #fff;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.mypage-profile .img-wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .mypage-profile{
     padding-top: 216px;
     background-color: #F9F9F9;
@@ -88,6 +101,11 @@
 .mypage-profile .tab-btn button{
     padding-bottom: 29px;
 }
+.mypage-profile .tab-btn button span{
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
 .mypage-profile .inner{
     position: relative;
 }
@@ -159,31 +177,47 @@
     padding: 0 25px;
     height: 45px;
 }
-.mypage-content .card .card-bottom .link-group a:first-child{
+.mypage-content .card.waiting .card-bottom .link-group a:first-child{
     color: #0B1F7D;
     background-color: #fff;
 }
-.mypage-content .card .card-bottom .link-group a:last-child{
+.mypage-content .card.waiting .card-bottom .link-group a:last-child{
     color: #fff;
     border: 1px solid #fff;
     background-color: #0B1F7D;
 }
-.mypage-content .card:hover{
+.mypage-content .card.success .card-bottom .link-group a:first-child{
+    color: #fff;
+    background-color: #0B1F7D;
+}
+.mypage-content .card.success .card-bottom .link-group a:last-child{
+    color: #0B1F7D;
+    border: 1px solid #0B1F7D;
+    background-color: #fff;
+}
+.mypage-content .card.success:hover{
+    background-color: #F9F9F9;
+    border: 1px solid #f9f9f9;
+}
+.mypage-content .card.waiting:hover{
     background-color: #0B1F7D;
 }
 .mypage-content .card:hover span.plus{
-    transform: rotate(90deg);
+    transform: rotate(45deg);
 }
-.mypage-content .card:hover span.plus img.white{
+.mypage-content .card.waiting:hover span.plus img.white{
     opacity: 1;
 }
-.mypage-content .card:hover span.plus img.black{
+.mypage-content .card.waiting:hover span.plus img.black{
     opacity: 0;
 }
-.mypage-content .card:hover .date{
+.mypage-content .card.waiting:hover .date{
     color: #fff;
 }
-.mypage-content .card:hover .kind{
+.mypage-content .card.success:hover .title{
+    color: #000;
+}
+.mypage-content .card.waiting:hover .kind{
     color: #fff;
 }
 .mypage-content .card:hover .link-group{
