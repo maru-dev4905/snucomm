@@ -363,6 +363,9 @@ footer .fnb a{
     align-items: center;
     gap: 7px;
 }
+.snuapp + footer .fnb a{
+    color: #60DF7C;
+}
 footer .fnb li:last-child a{
     margin-bottom: 0;
 }
@@ -384,6 +387,9 @@ footer .footer-content h2{
     font-family: "Montserrat";
     font-weight: 800;
 }
+.snuapp + footer .footer-content h2{
+    color: #60DF7C;
+}
 footer .footer-content ul{
     display: flex;
     gap: 78px;
@@ -395,6 +401,9 @@ footer .footer-content span{
     display: block;
     margin-bottom: 16px;
 }
+.snuapp + footer .footer-content span{
+    color: #60DF7C;
+}
 footer .footer-content span::before{
     content: "";
     display: block;
@@ -402,6 +411,9 @@ footer .footer-content span::before{
     height: 3px;
     background-color: #0EBCF6;
     margin-bottom: 16px;
+}
+.snuapp + footer .footer-content span::before{
+    background-color: #60DF7C;
 }
 footer .footer-content a{
     font-size: 30px;
@@ -411,10 +423,16 @@ footer .footer-content a{
     margin-bottom: 20px;
     display: block;
 }
+.snuapp + footer .footer-content a{
+    color: #60DF7C;
+}
 footer .footer-content p{
     font-size: 14px;
     font-weight: 500;
     color: #0EBCF6;
+}
+.snuapp + footer .footer-content p{
+    color: #60DF7C;
 }
 footer .footer-bottom{
     
@@ -427,11 +445,17 @@ footer .footer-bottom .footer-select-btn{
     font-weight: 600;
     color: #0EBCF6;
 }
+.snuapp + footer .footer-bottom .footer-select-btn{
+    color: #60DF7C;
+}
 footer .copyright{
     font-size: 12px;
     font-weight: 400;
     color: #0EBCF6;
     margin-top: 12px;
+}
+.snuapp + footer .copyright{
+    color: #60DF7C;
 }
 .footer-select-content{
     display: flex;
@@ -445,6 +469,9 @@ footer .copyright{
     visibility: hidden;
     margin-top: 0;
     transition: 0.3s ease;
+}
+.snuapp + footer .footer-select-content{
+    color: #60DF7C;
 }
 .footer-select-btn.active + .footer-select-content{
     opacity: 1;
@@ -738,6 +765,9 @@ section .inner{
     display: block;
     transition: 0.3s ease;
 }
+.snuapp .card .kind{
+    color: #60DF7C;
+}
 .card .title{
     font-size: 18px;
     font-weight: 600;
@@ -761,12 +791,18 @@ section .inner{
     font-size: 13px;
     font-weight: 600;
 }
+.snuapp .card .dDay{
+    background-color: #60DF7C;
+}
 .card .date{
     font-size: 15px;
     color: #0EBCF6;
     font-weight: 400;
     margin-bottom: 2px;
     transition: 0.3s ease;
+}
+.snuapp .card .date{
+    color: #60DF7C;
 }
 .card i{
     width: 36px;
@@ -780,6 +816,12 @@ section .inner{
 }
 .card:hover i{
     background: url("../images/visual/card-plus2.svg") no-repeat center / cover;
+}
+.snuapp .card i{
+    background: url("../images/visual/cardArrowBlack.svg") no-repeat center / cover;
+}
+.snuapp .card:hover i{
+    background: url("../images/visual/cardArrowWhite.svg") no-repeat center / cover;
 }
 
 .card .card-state{
@@ -822,6 +864,9 @@ section .inner{
     animation: wave 8000ms infinite linear;
     z-index: 0;
 }
+.snuapp .card .wave{
+    background: #60DF7C;
+}
 .card .state-number.clear-state + .wave{
     bottom: -200px;
 }
@@ -841,6 +886,10 @@ section .inner{
 .card .state-number.clear-state2 .current,
 .card .state-number.clear-state3 .current{
     color: #0EBCF6;
+}
+.snuapp .card .state-number.clear-state2 .current,
+.snuapp .card .state-number.clear-state3 .current{
+    color: #60DF7C;
 }
 .card .card-bg{
     position: absolute;
@@ -918,14 +967,26 @@ section .inner{
     bottom: 40px;
     transition: 0.3s ease;
 }
+.snuapp .community-card .card-wed{
+    color: #60DF7C;
+}
 .community-card i{
     background: url("../images/visual/card-plus3.svg") no-repeat center / cover;
     left: 35px;
     bottom: 30px;
     transition: 0.3s ease;
 }
+.snuapp .community-card i{
+    background: url("../images/visual/card-plus3.svg") no-repeat center / cover;
+}
+.snuapp .community-card:hover i{
+    background: url("../images/icons/ico-rightWhiteArrow2.svg") no-repeat center / cover;
+}
 .community-card:hover {
     background-color: #0EBCF6;
+}
+.snuapp .community-card:hover {
+    background-color: #60DF7C;
 }
 .community-card:hover .desc{
     color: #fff;

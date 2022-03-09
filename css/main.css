@@ -8,6 +8,9 @@
     margin-bottom: 20px;
     display: block;
 }
+.snuapp .sec-text > span{
+    color: #60DF7C;
+}
 .sec-text h2{
     font-size: 40px;
     font-weight: 600;
@@ -46,6 +49,9 @@
     display: block;
     z-index: 0;
 }
+.snuapp .sec-text a::after{
+    background-color: #60DF7C;
+}
 .sec-text a img{
     position: relative;
     z-index: 1;
@@ -57,6 +63,9 @@
 
 .main + footer{
     padding-top: 246px;
+}
+.main.snuapp + footer{
+    padding-top: 140px;
 }
 
 .sticky-text{
@@ -90,6 +99,10 @@
     border-radius: 100%;
     background-color: #0EBCF6;
 }
+.snuapp .banner .circle{
+    background-color: #60DF7C;
+}
+
 .banner{
     height: 100vh;
     padding-top: 100px;
@@ -361,6 +374,9 @@
     background: linear-gradient(161.63deg, #62DAAF 0%, #0EBCF6 98.55%);
     height: 524px;
 }
+.snuapp .program{
+    background: linear-gradient(161.63deg, #67E082 32.42%, #CBFF8A 98.55%);
+}
 .program .inner{
     height: 100%;
     display: flex;
@@ -390,12 +406,18 @@
     color: #fff;
     font-weight: 300;
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 .program-tag ul{
     display: flex;
     flex-wrap: wrap;
     width: 400px;
     gap: 10px;
+}
+.snuapp .program-tag ul{
+    width: 310px;
 }
 .program-tag ul li{
     font-size: 14px;
@@ -404,6 +426,9 @@
     border-radius: 25px;
     font-weight: 500;
     transition: 0.3s ease;
+}
+.snuapp .program-tag ul li{
+    color: #60DF7C;
 }
 .program-tag ul li:hover{
     opacity: 0.6;
@@ -470,6 +495,10 @@
 }
 .program-slide .tab-content button.active{
     background-color: #0EBCF6;
+    color: #fff;
+}
+.snuapp .program-slide .tab-content button.active{
+    background-color: #60DF7C;
     color: #fff;
 }
 .program-slide .slide-group{
@@ -580,6 +609,11 @@
     background-attachment: fixed;
     position: relative;
 }
+.snuapp .small-banner{
+    background: url("../images/visual/banner-visual2.png") no-repeat top / cover;
+    background-attachment: fixed;
+    position: relative;
+}
 .small-banner .bg{
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -625,6 +659,10 @@
     color: #fff;
     background-color: #0EBCF6;
     border: 1px solid #0EBCF6;
+}
+.snuapp .small-banner a:hover{
+    background-color: #60DF7C;
+    border: 1px solid #60DF7C;
 }
 .small-banner a img{
     position: absolute;
