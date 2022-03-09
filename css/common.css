@@ -179,11 +179,11 @@ header .logo-select-btn i{
 }
 header .logo-list{
     position: absolute;
-    right: 0;
+    left: 0;
     top: calc(100% + 10px);
     border: 1px solid #f0f0f0;
     border-radius: 5px;
-    width: 100%;
+    width: 260px;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
@@ -198,6 +198,17 @@ header .logo-list li:first-child{
 }
 header .logo-list li{
     padding: 5px 0;
+    position: relative;
+}
+header .logo-list li.active button::before{
+    content: "";
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #0EBCF6;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 header .logo-list li button{
     opacity: 0.6;
@@ -205,12 +216,13 @@ header .logo-list li button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 14px 20px;
     transition: 0.3s ease;
+    margin: 0 auto;
+    position: relative;
 }
 header .logo-list li img{
-    width: 80%;
+    height: 30px;
 }
 header .logo-list li button:hover{
     opacity: 1;
