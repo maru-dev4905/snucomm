@@ -3,6 +3,7 @@
 .myPage-header .sub-menu{
     display: flex;
     gap: 48px;
+    position: relative;
 }
 .myPage-header .sub-menu a{
     padding: 0 18px;
@@ -237,4 +238,42 @@
     font-weight: 400;
     color: #666;
 }
+
+
+.myPage-header .menu{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100px;
+}
+.myPage-header .menu-top{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0B1F7D;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.myPage-header .menu a{
+    width: 100%;
+    height: 100px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.myPage-header .menu a:nth-child(2){
+    background-image: url("../images/visual/menu-bg01.png");
+}
+.myPage-header .menu a:nth-child(3){
+    background-image: url("../images/visual/menu-bg02.png");
+}
+.myPage-header .menu a:nth-child(4){
+    background-image: url("../images/visual/menu-bg03.png");
+}
+
 /* mypage */
