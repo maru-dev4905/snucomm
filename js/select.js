@@ -34,9 +34,11 @@ $(document).ready(function(){
     
     logoSelectBtn.click(function(){
         if(logoSelectWrap.hasClass("show")){
+            logoSelectBtn.removeClass("show");
             logoSelectWrap.removeClass("show");
             logoSelectList.removeClass("show");
         }else{
+            logoSelectBtn.addClass("show");
             logoSelectWrap.addClass("show");
             logoSelectList.addClass("show");
         }

@@ -231,7 +231,6 @@ main{
 .banner-slide-controller .banner-btn button{
     width: 42px;
     height: 42px;
-    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +239,18 @@ main{
 }
 .banner-slide-controller .banner-btn button:hover{
     opacity: 0.4;
+}
+.banner-slide-controller .banner-btn button.prev-btn i{
+    width: 42px;
+    height: 42px;
+    display: block;
+    background: url("../images/icons/ico-prevBlack.svg") no-repeat center / cover;
+}
+.banner-slide-controller .banner-btn button.next-btn i{
+    width: 42px;
+    height: 42px;
+    display: block;
+    background: url("../images/icons/ico-nextBlack.svg") no-repeat center / cover;
 }
 
 /* main banner */
@@ -838,3 +849,186 @@ main{
 
 
 /* main community */
+
+
+
+
+
+@media all and (max-width:768px){
+    .banner{
+        padding-top: 70px;
+    }
+    .banner .banner-slide{
+        height: calc(100vh - 70px);
+    }
+    .banner .inner{
+        height: calc(100vh - 70px);
+    }
+    .banner-content{
+        transform: none;
+        top: 152px;
+        height: calc(100% - 200px);
+    }
+    .banner-text h2{
+        font-size: 25px;
+        margin-bottom: 11px;
+    }
+    .banner-text p{
+        font-size: 14px;
+    }
+
+    .banner .banner-slide{
+        border-radius: 0;
+        width: 100vw;
+    }
+    .banner .banner-slide::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 198px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        content: "";
+        z-index: 10;
+    }
+    .banner-slide-controller{
+        position: absolute;
+        bottom: 0;
+        gap: 8px;
+    }
+    .banner-slide-controller .slide-state .top{
+        font-size: 12px;
+        color: #fff;
+    }
+    .banner-slide-controller .slide-state .top .play-btn i{
+        background: url("../images/icons/ico-playWhite.svg") no-repeat center / cover;
+    }
+    .banner-slide-controller .slide-state .top .play-btn.stop i{
+        background: url("../images/icons/ico-stopWhite.svg") no-repeat center / cover;
+    }
+    .banner-slide-controller .slide-state .state-line{
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 150px;
+    }
+    .banner-slide-controller .slide-state .state-line span{
+        background-color: #fff;
+    }
+
+    .banner-slide-controller .banner-btn{
+        gap: 6px;
+    }
+    .banner-slide-controller .banner-btn button{
+        width: 32px;
+        height: 32px;
+    }
+    .banner-slide-controller .banner-btn button.prev-btn i{
+        width: 32px;
+        height: 32px;
+        display: block;
+        background: url("../images/icons/ico-prevWhite.svg") no-repeat center / cover;
+    }
+    .banner-slide-controller .banner-btn button.next-btn i{
+        width: 32px;
+        height: 32px;
+        display: block;
+        background: url("../images/icons/ico-nextWhite.svg") no-repeat center / cover;
+    }
+
+    .about .bg img:last-child{
+        display: none;
+    }
+    .about .bg img.pc{
+        display: none;
+    }
+    .about .bg img.mo{
+        display: block;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: auto;
+    }
+    .about .inner{
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+    }
+    .about .sec-text{
+        padding-top: 70px;
+    }
+
+    .sec-text > span{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .sec-text h2{
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .sec-text p{
+        font-size: 13px;
+        margin-bottom: 47px;
+    }
+    .sec-text a{
+        font-size: 14px;
+    }
+    .sec-text a img{
+        width: 22px;
+    }
+    .sec-text a::after{
+        width: 29px;
+        height: 29px;
+        right: -16px;
+    }
+
+    .about-card{
+        margin-top: 42px;
+        width: 100%;
+        overflow-x: scroll;
+        touch-action: pan-x;
+        pointer-events: auto;
+    }
+    .about-card ul{
+        display: flex;
+        width: max-content;
+    }
+    .about-card li{
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+    }
+    .about-card li .front{
+        width: 300px;
+        height: 300px;
+        padding: 36px;
+        border: 1px solid #E9E9E9;
+    }
+    .about-card li:first-child{
+        margin-top: 0;
+    }
+    .about-card li:nth-child(3){
+        margin-top: 0;
+    }
+    .about-card li:nth-child(4){
+        margin-top: 0;
+    }
+    .about-card li img{
+        margin-bottom: 20px;
+    }
+    .about-card li h3{
+        font-size: 17px;
+        margin-bottom: 72px;
+    }
+    .about-card li p{
+        font-size: 12px;
+    }
+    .about-card li .front i{
+        display: none;
+    }
+    .about-card li .back i{
+        display: none;
+    }
+
+    .sticky-text{
+        display: none;
+    }
+}

@@ -171,11 +171,15 @@ header .logo-select-btn{
     width: 32px;
     height: 32px;
 }
+header .logo-select-btn.show i{
+    transform: rotate(180deg);
+}
 header .logo-select-btn i{
     display: block;
     width: 100%;
     height: 100%;
     background: url("../images/icons/ico-logoSelectArrow.svg") no-repeat center / cover;
+    transition: 0.3s ease;
 }
 header .logo-list{
     position: absolute;
@@ -199,6 +203,9 @@ header .logo-list li:first-child{
 header .logo-list li{
     padding: 5px 0;
     position: relative;
+}
+header.snuapp .logo-list li.active button::before{
+    background-color: #60DF7C;
 }
 header .logo-list li.active button::before{
     content: "";
@@ -353,6 +360,7 @@ footer{
     border-top: 1px solid #ddd;
     padding: 140px 0;
     background: url("../images/visual/footer-bg.svg") no-repeat right bottom / 695px;
+    overflow-x: hidden;
 }
 footer .inner{
     width: calc(100% - 40px);
@@ -1019,7 +1027,7 @@ section .inner{
 .menu-box{
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -890px;
     background-color: #0EBCF6;
     z-index: 100000000;
     transition: 0.5s ease;
@@ -1247,3 +1255,50 @@ section .inner{
 }
 
 /* pagination */
+
+
+
+
+
+
+
+
+
+@media all and (max-width:768px){
+
+    .menu-box{
+        right: -100vw;
+        width: 100vw;
+    }
+    header{
+        height: 70px;
+    }
+    header .gnb{
+        display: none;
+    }
+    header .sub-menu a.profile{
+        display: none;
+    }
+    header .inner{
+        width: calc(100% - 40px);
+    }
+    header .logo-select{
+        flex-direction: row-reverse;
+    }
+    header .logo-list{
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100vw;
+    }
+    header .current-logo img{
+        width: 110px;
+    }
+    header .logo-list li button{
+        opacity: 1;
+    }
+
+    .menu-box .menu-img{
+        display: none;
+    }
+}
