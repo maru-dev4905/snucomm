@@ -1,5 +1,9 @@
 /* style */
 
+main{
+    overflow-x: hidden;
+}
+
 .sec-text > span{
     font-size: 17px;
     font-family: "Montserrat";
@@ -107,6 +111,7 @@
     height: 100vh;
     padding-top: 100px;
     position: relative;
+    z-index: 10;
 }
 .banner .banner-slide{
     position: absolute;
@@ -242,9 +247,13 @@
 
 /* main about */
 
+.snuapp .about .inner{
+    padding-bottom: 440px;
+}
 .about{
     height: max-content;
     position: relative;
+    z-index: 5;
 }
 .about .bg{
     position: absolute;
@@ -287,9 +296,42 @@
     grid-template-columns: repeat(2, 325px);
     grid-column-gap: 34px;
 }
+.about-card.about-card-style2{
+    position: absolute;
+    right: -144px;
+    margin: 0;
+    /* overflow: hidden; */
+}
+.about-card.about-card-style2 ul{
+    grid-template-columns: repeat(3, 325px);
+}
+.about-card.about-card-style2 li{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 352px);
+    gap: 30px;
+    margin-top: 0 ;
+}
+.about-card.about-card-style2 li .about-card-item.design-card{
+    background-color: #F6F6F6;
+}
+.about-card.about-card-style2 li .about-card-item{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
 .about-card li{
     height: 352px;
     position: relative;
+}
+.about-card.about-card-style2 li:first-child,
+.about-card.about-card-style2 li:last-child{
+    margin-top: -136px;
+}
+.about-card.about-card-style2 li:nth-child(2){
+    margin-top: 20px;
 }
 .about-card li:first-child{
     margin-top: 80px;
@@ -329,7 +371,7 @@
 
 .about-card li .front{
     width: 100%;
-    height: 100%;
+    height: 352px;
     padding: 50px 40px;
     position: relative;
     position: absolute;
@@ -348,8 +390,14 @@
     bottom: 40px;
     background: url("../images/icons/ico-cardPlus.svg") no-repeat center / cover;
 }
-.about-card li:hover .front{
+.about-card.about-card-style1 li:hover .front{
     transform: rotateY(180deg);
+}
+.about-card.about-card-style2 .about-card-item:hover .front{
+    transform: rotateY(180deg);
+}
+.snuapp .about-card li .back{
+    background-color: #60DF7C;
 }
 .about-card li .back {
     transform: rotateY(-180deg);
@@ -361,7 +409,10 @@
     height: 100%;
     padding: 50px 40px;
 }
-.about-card li:hover .back {
+.about-card.about-card-style2 .about-card-item:hover .back {
+    transform: rotateY(0);
+}
+.about-card.about-card-style1 li:hover .back {
     transform: rotateY(0);
 }
 
@@ -376,6 +427,8 @@
 }
 .snuapp .program{
     background: linear-gradient(161.63deg, #67E082 32.42%, #CBFF8A 98.55%);
+    position: relative;
+    z-index: 10;
 }
 .program .inner{
     height: 100%;
@@ -469,6 +522,7 @@
     background-color: #F9F9F9;
     position: relative;
     padding: 120px 0;
+    z-index: 15;
 }
 .program-slide .tab-content{
     position: absolute;
@@ -506,10 +560,14 @@
     overflow: hidden;
 }
 .program-slide .slide-group li{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 }
 .program-slide .slide-group li.active{
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
 }
 
 /* main slide */

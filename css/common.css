@@ -187,6 +187,7 @@ header .logo-list{
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
+    background-color: #fff;
 }
 header .logo-list.show{
     opacity: 1;
@@ -197,20 +198,19 @@ header .logo-list li:first-child{
 }
 header .logo-list li{
     padding: 5px 0;
-    border-top: 1px solid #f0f0f0;
 }
 header .logo-list li button{
     opacity: 0.6;
     transition: 0.3s ease;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px 20px;
+    padding: 14px 20px;
     transition: 0.3s ease;
 }
 header .logo-list li img{
-    width: 70%;
+    width: 80%;
 }
 header .logo-list li button:hover{
     opacity: 1;
@@ -1028,7 +1028,7 @@ section .inner{
 .menu-box > ul{
     display: flex;
     flex-direction: column;
-    width: 380px;
+    width: 400px;
     position: relative;
 }
 .menu-box > ul > li{
@@ -1052,13 +1052,65 @@ section .inner{
 }
 .menu-box > ul > li > a + ul{
     position: absolute;
-    right: -142px;
+    left: 280px;
     right: 0;
     top: 10px;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
     z-index: 10;
+}
+.menu-box ul.depth3{
+    /* position: absolute; */
+    /* left: 100%; */
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+}
+.menu-box ul.depth3 a:hover::after{
+    display: none;
+}
+.menu-box > ul > li:nth-child(2) > a + ul{
+    /* display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 37px; */
+    width: 333px;
+    height: 140px;
+    display: block;
+}
+.menu-box > ul > li:nth-child(2) > a + ul > li{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 37px;
+    height: 38px;
+    transition: 0.3s ease;
+}
+.menu-box > ul > li:nth-child(2) > a + ul li a{
+    height: max-content;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.menu-box > ul > li:nth-child(2) > a + ul li ul{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    transition: 0.3s ease;
+}
+.menu-box > ul > li:nth-child(2) > a + ul > li:hover{
+    height: 140px;
+}
+.menu-box > ul > li:nth-child(2) > a + ul > li:first-child:hover{
+    height: 38px;
+}
+.menu-box > ul > li:nth-child(2) > a + ul li:hover > a{
+    opacity: 1;
+}
+.menu-box > ul > li:nth-child(2) > a + ul > li:hover > a::after{
+    width: 100%;
+}
+.menu-box > ul > li:nth-child(2) > a + ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
 }
 .menu-box > ul > li > a + ul a{
     margin-bottom: 20px;

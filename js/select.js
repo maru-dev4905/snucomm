@@ -26,4 +26,19 @@ $(document).ready(function(){
         th.closest(".select").removeClass("show");
         currentSelect.css("color","#000")
     });
+
+
+    var logoSelectBtn = $(".logo-select-btn");
+    var logoSelectList = $(".logo-select .logo-list");
+    var logoSelectWrap = $(".logo-select");
+    
+    logoSelectBtn.click(function(){
+        if(logoSelectWrap.hasClass("show")){
+            logoSelectWrap.removeClass("show");
+            logoSelectList.removeClass("show");
+        }else{
+            logoSelectWrap.addClass("show");
+            logoSelectList.addClass("show");
+        }
+    });
 });
