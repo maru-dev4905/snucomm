@@ -1746,6 +1746,7 @@ section .inner{
         padding: 0 20px;
     }
     .sub header.subpage-header span{
+        height: 17px;
         position: absolute;
         left: 50%;
         top: 50%;

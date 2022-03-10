@@ -1110,4 +1110,55 @@ form.program-request-form input[readonly]:focus{
     .program-request-wrap{
         padding: 110px 0 70px;
     }
+
+    .program-request-success-wrap{
+        margin-top: 0;
+        padding: 140px 0 65px;
+    }
+    .program-request-success-wrap .inner > img{
+        width: 100px;
+        height: 100px;
+    }
+    .program-request-success-wrap h2{
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .program-request-success-wrap p{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .program-request-success-wrap .success-text{
+        width: 100%;
+        height: 60px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+    .program-request-success-wrap .success-text strong{
+        width: calc(100% - 40px);
+        line-height: 1.5;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .program-request-success-wrap .link-group{
+        width: 100%;
+    }
+    .program-request-success-wrap .link-group a{
+        height: 48px;
+        font-size: 14px;
+    }
+    .program-request-success-wrap .waitNumber{
+        width: 100px;
+        height: 100px;
+    }
+    .program-request-success-wrap .waitNumber span{
+        font-size: 35px;
+    }
+    .program-request-success-wrap .link-group a:last-child img{
+        height: 15px;
+    }
+    .program-request-success-wrap .link-group a:first-child img{
+        height: 13px;
+    }
 }
