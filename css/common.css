@@ -1371,6 +1371,7 @@ section .inner{
     }
     .community-card .kind{
         font-size: 20px;
+        font-weight: 700;
     }
 
     footer{
@@ -1426,6 +1427,13 @@ section .inner{
         font-size: 11px;
         color: #999 !important;
         margin: 0 auto;
+        font-weight: 300;
+    }
+    .footer-select-btn + .footer-select-content{
+        height: 0;
+    }
+    .footer-select-btn.active + .footer-select-content{
+        height: 10px;
     }
     .footer-select-btn img{
         filter: grayscale(1);
@@ -1545,9 +1553,13 @@ section .inner{
         justify-content: space-between;
         align-items: center;
         font-weight: 600;
+        transition: 0.3s ease;
     }
-    .menu-box > ul > li.active > button{
+    .menu-box > ul > li:hover > button{
         color: #0EBCF6;
+    }
+    .snuapp .menu-box > ul > li:hover > button{
+        color: #60DF7C;
     }
 
     .menu-box > ul > li{
@@ -1559,8 +1571,9 @@ section .inner{
         display: block;
         background: url("../images/icons/ico-rightBlueArrow.svg") no-repeat center / cover;
         filter: grayscale(1);
+        transition: 0.3s ease;
     }
-    .menu-box .depth1 > li.active > button i{
+    .menu-box .depth1 > li:hover > button i{
         filter: grayscale(0);
     }
     .menu-box .depth2{
@@ -1595,9 +1608,11 @@ section .inner{
         align-items: center;
         color: #000;
         font-weight: 600;
+        font-size: 15px;
     }
     .menu-box .depth2 .top .back-btn img{
         height: 12px;
+        margin-top: 3px;
     }
     .menu-box .depth2 .top .close-btn{
         position: relative;
@@ -1627,6 +1642,7 @@ section .inner{
         transition: 0.3s ease;
         position: relative;
         z-index: 10;
+        top: -1px;
     }
     .menu-box .depth2 .list button img{
         transform: rotate(90deg);
@@ -1635,6 +1651,7 @@ section .inner{
     }
     .menu-box .depth2 .list button.show{
         color: #0EBCF6;
+        font-weight: 500;
     }
     .menu-box .depth2 .list button.show img{
         transform: rotate(-90deg);
@@ -1643,6 +1660,11 @@ section .inner{
     .menu-box .depth2 .list button + ul{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        position: relative;
+        z-index: 0;
+    }
+    .menu-box .depth2 .list button + ul:last-of-type{
+        top: -3px;
     }
     .menu-box .depth2 .list button + ul li{
         width: 100%;
@@ -1673,7 +1695,7 @@ section .inner{
         visibility: hidden;
     }
     .menu-box .depth2 .list button.show + ul{
-        max-height: 393px;
+        max-height: 400px;
         opacity: 1;
         visibility: visible;
     }
@@ -1719,10 +1741,7 @@ section .inner{
     .snuapp .menu-box::before{
         background-color: #60DF7C;
     }
-    .snuapp .menu-box > ul > li.active > button{
-        color: #60DF7C;
-    }
-    .menu-box .depth1 > li > button i{
+    .snuapp .menu-box .depth1 > li > button i{
         background: url("../images/icons/ico-rightGreenArrow.svg") no-repeat center / cover;
     }
     .snuapp .menu-box .depth2 .list button.show{
@@ -1787,5 +1806,31 @@ section .inner{
 
     footer{
         padding: 60px 0;
+    }
+
+    .card{
+        box-shadow: none;
+        border: 1px solid #e9e9e9;
+    }
+    .community-card:hover{
+        background-color: #fff;
+    }
+    .community-card:hover .kind{
+        color: #0EBCF6;
+    }
+    .community-card:hover .desc{
+        color: #121212;
+    }
+    .community-card:hover .card-wed{
+        color: #0EBCF6;
+    }
+    .community-card i{
+        background: url("../images/icons/ico-rightBlackArrow.svg") no-repeat center / cover;
+    }
+    .community-card i{
+        background: url("../images/icons/ico-rightBlackArrow.svg") no-repeat center / cover;
+    }
+    .community-card:hover i{
+        background: url("../images/icons/ico-rightBlackArrow.svg") no-repeat center / cover;
     }
 }

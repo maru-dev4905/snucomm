@@ -892,6 +892,7 @@ main.snuapp{
     .banner-text h2{
         font-size: 25px;
         margin-bottom: 11px;
+        line-height: 1.5;
     }
     .banner-text p{
         font-size: 14px;
@@ -969,6 +970,7 @@ main.snuapp{
         flex-direction: column;
         position: relative;
         z-index: 10;
+        padding-bottom: 70px;
     }
     .about .sec-text{
         padding-top: 70px;
@@ -977,6 +979,7 @@ main.snuapp{
     .sec-text > span{
         font-size: 12px;
         margin-bottom: 10px;
+        font-weight: 700;
     }
     .sec-text h2{
         font-size: 24px;
@@ -1091,7 +1094,7 @@ main.snuapp{
     }
 
     .program-slide .tab-content{
-        width: calc(100vw - 40px);
+        /* width: calc(100vw - 40px); */
         padding: 4px;
         top: -21px;
     }
@@ -1188,5 +1191,18 @@ main.snuapp{
     }
     .snuapp .small-banner{
         background-attachment: scroll;
+    }
+
+    .banner .banner-slide li img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .program .sec-text p{
+        font-weight: 200;
+    }
+    .swiper-horizontal>.swiper-scrollbar{
+        margin-top: 30px;
     }
 }
