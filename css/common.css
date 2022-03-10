@@ -1756,6 +1756,7 @@ section .inner{
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        text-align: center;
     }
     .page-path{
         display: none;
@@ -1774,5 +1775,16 @@ section .inner{
     }
     body.scroll header{
         box-shadow: none;
+    }
+
+    .select{
+        width: 110px;
+    }
+    form input[type="text"], form input[type="password"]{
+        padding: 0 15px;
+    }
+
+    footer{
+        padding: 60px 0;
     }
 }
