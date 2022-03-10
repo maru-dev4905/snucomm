@@ -410,6 +410,10 @@ footer .footer-content h2{
 .snuapp + footer .footer-content h2{
     color: #60DF7C;
 }
+footer .footer-content h2 img{
+    display: none;
+}
+
 footer .footer-content ul{
     display: flex;
     gap: 78px;
@@ -777,6 +781,7 @@ section .inner{
     box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     display: block;
+    z-index: 1000;
 }
 .card .kind{
     font-size: 16px;
@@ -879,11 +884,18 @@ section .inner{
     background: #0EBCF6;
     width: 265px;
     height: 265px;
-    transform: translateX(-50%);
-    transform-origin: 50% 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     border-radius: 43%;
+    -webkit-animation: wave 8000ms infinite linear;    
+    -ms-animation: wave 8000ms infinite linear;    
     animation: wave 8000ms infinite linear;
     z-index: 0;
+    overflow: hidden;
 }
 .snuapp .card .wave{
     background: #60DF7C;
@@ -955,8 +967,16 @@ section .inner{
 }
 
 @keyframes wave {
-    from { transform: translateX(-50%) rotate(0deg); }
-    from { transform: translateX(-50%) rotate(360deg); }
+    from { 
+        -webkit-transform: translateX(-50%) rotate(0deg);
+        -ms-transform: translateX(-50%) rotate(0deg);
+        transform: translateX(-50%) rotate(0deg);
+     }
+    to { 
+        -webkit-transform: translateX(-50%) rotate(360deg);
+        -ms-transform: translateX(-50%) rotate(360deg);
+        transform: translateX(-50%) rotate(360deg);
+     }
 }
 
 .community-card {
@@ -1036,6 +1056,9 @@ section .inner{
     height: 100vh;
     width: 890px;
     padding-top: 167px;
+}
+.menu-box.mo{
+    display: none;
 }
 .menu-box.show{
     right: 0;
@@ -1301,4 +1324,391 @@ section .inner{
     .menu-box .menu-img{
         display: none;
     }
+
+    .swiper-slide.card{
+        width: 300px !important;
+        height: 284px !important;
+    }
+    .card{
+        padding: 35px;
+    }
+    .card .kind{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .card .title{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .card .date{
+        font-size: 13px;
+    }
+    .card .dDay{
+        height: 25px;
+        padding: 0 13px;
+        display: flex;
+        align-items: center;
+    }
+    .card i{
+        width: 32px;
+        height: 32px;
+    }
+    .card .card-state{
+        width: 57px;
+        height: 57px;
+        z-index: 1000;
+        overflow: hidden;
+    }
+    .card .wave{
+    }
+    .card:hover i{
+        background-size: 32px 32px;
+    }
+    .community-card{
+        padding: 28px;
+    }
+    .community-card .kind{
+        font-size: 20px;
+    }
+
+    footer{
+        background: url("../images/visual/footer-bg-mo.svg") no-repeat center 20px / 272px;
+    }
+    footer .fnb{
+        margin-bottom: 20px;
+    }
+    footer .fnb a{
+        font-size: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    footer .footer-top{
+        flex-direction: column;
+    }
+    footer .footer-content{
+        padding-left: 0;
+    }
+    footer .fnb a img{
+        display: none;
+    }
+    footer .footer-content h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    footer .footer-content span{
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    footer .footer-content a{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    footer .footer-content p{
+        font-size: 11px;
+    }
+    footer .footer-content span::before{
+        width: 14px;
+        height: 2px;
+        margin-bottom: 5px;
+    }
+    footer .footer-bottom{
+        margin-top: 50px;
+    }
+    footer .footer-content ul{
+        gap: 0;
+        justify-content: space-between;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+    footer .footer-bottom .footer-select-btn{
+        font-size: 11px;
+        color: #999;
+        margin: 0 auto;
+    }
+    .footer-select-btn img{
+        filter: grayscale(1);
+        width: 10px;
+        height: 10px;
+    }
+    .footer-select-content{
+        font-size: 10px;
+        color: #999;
+        gap: 9px;
+        text-align: center;
+        justify-content: center;
+    }
+    footer .copyright{
+        font-size: 11px;
+        color: #999;
+        text-align: center;
+    }
+    footer .footer-content h2{
+        margin-bottom: 0;
+        transition: 0.3s ease;
+        position: relative;
+        width: max-content;
+        margin: 0 auto;
+    }
+    footer .footer-content h2 img{
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: -20px;
+        transition: 0.3s ease;
+    }
+    footer .footer-content.show h2 img{
+        transform: rotate(180deg);
+    }
+    footer .footer-content ul{
+        opacity: 0;
+        transition: 0.3s ease;
+        height: 0;
+        visibility: hidden;
+    }
+    footer .footer-content.show ul{
+        height: 70px;
+        opacity: 1;
+        visibility:visible;
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+    .menu-box{
+        padding: 20px;
+        display: none;
+    }
+    .menu-box.mo{
+        display: block;
+        background-color: #fff;
+    }
+    .menu-box::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 88px;
+        border-radius: 0 0 72px 0;
+        background-color: #0EBCF6;
+    }
+    .menu-box .close-btn{
+        right: 20px;
+        top: 20px;
+    }
+    .menu-box .close-btn img{
+        width: 17px;
+        height: 17px;
+    }
+    .menu-box .menu-box-login{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+    .menu-box .menu-box-login p{
+        font-size: 12px;
+        color: #fff;
+        margin-bottom: 16px;
+        font-weight: 300;
+    }
+    .menu-box .menu-box-login a{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 500;
+    }
+    .menu-box .menu-box-login a img{
+        width: 12px;
+        height: 12px;
+    }
+    .menu-box .depth1{
+        padding-top: 100px;
+        width: 100%;
+    }
+    .menu-box > ul > li > button{
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #333;
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+    }
+    .menu-box > ul > li.active > button{
+        color: #0EBCF6;
+    }
+
+    .menu-box > ul > li{
+        opacity: 1;
+    }
+    .menu-box .depth1 > li > button i{
+        width: 18px;
+        height: 18px;
+        display: block;
+        background: url("../images/icons/ico-rightBlueArrow.svg") no-repeat center / cover;
+        filter: grayscale(1);
+    }
+    .menu-box .depth1 > li.active > button i{
+        filter: grayscale(0);
+    }
+    .menu-box .depth2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+    }
+    .menu-box .depth2.show{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-box .depth2 .top{
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 0 20px;
+    }
+    .menu-box .depth2 .top .back-btn{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    .menu-box .depth2 .top .back-btn img{
+        height: 12px;
+    }
+    .menu-box .depth2 .top .close-btn{
+        position: relative;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+    .menu-box .depth2 .list{
+        width: 100%;
+    }
+    .menu-box .depth2 .list button:last-child{
+        border-bottom: 1px solid #e9e9e9;
+
+    }
+    .menu-box .depth2 .list button{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #333;
+        width: 100%;
+        padding: 0 20px;
+        border-top: 1px solid #e9e9e9;
+        background-color: #fff;
+        transition: 0.3s ease;
+        position: relative;
+        z-index: 10;
+    }
+    .menu-box .depth2 .list button img{
+        transform: rotate(90deg);
+        filter: grayscale(1);
+        transition: 0.3s ease;
+    }
+    .menu-box .depth2 .list button.show{
+        color: #0EBCF6;
+    }
+    .menu-box .depth2 .list button.show img{
+        transform: rotate(-90deg);
+        filter: grayscale(0);
+    }
+    .menu-box .depth2 .list button + ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-box .depth2 .list button + ul li{
+        width: 100%;
+        height: 50px;
+        border: 1px solid #e9e9e9;
+        border-top: none;
+    }
+    .menu-box .depth2 .list button + ul li:nth-child(even){
+        border-left: none;
+    }
+    .menu-box .depth2 .list button + ul li:nth-child(1),
+    .menu-box .depth2 .list button + ul li:nth-child(2){
+        border-top: 1px solid #e9e9e9;
+    }
+    .menu-box .depth2 .list button + ul li a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #333;
+    }
+    .menu-box .depth2 .list button + ul{
+        transition: 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-box .depth2 .list button.show + ul{
+        max-height: 393px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-box.login .menu-box-login{
+        display: flex;
+        gap: 20PX;
+        align-items: center;
+        top: 32px;
+    }
+    .menu-box.login::before{
+        height: 132px;
+    }
+    .menu-box .profile img{
+        width: 80px;
+        height: 80px;
+    }
+    .menu-box .menu-box-login p{
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .menu-box .menu-box-login p span{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .menu-box.login .menu-box-login a{
+        border-bottom: 1px solid #fff;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .menu-box .mypage-btn{
+        position: absolute;
+        top: 16px;
+        right: 50px;
+        width: 26px;
+    }
+    .menu-box.login .depth1{
+        padding-top: 130px;
+    }
+    
 }

@@ -43,4 +43,16 @@ $(document).ready(function(){
             logoSelectList.addClass("show");
         }
     });
+
+
+    var footerContentSelect = $("footer .footer-content h2");
+    var footerContent = $("footer .footer-content");
+
+    footerContentSelect.click(function(){
+        if(footerContent.hasClass("show")){
+            footerContent.removeClass("show");
+        }else{
+            footerContent.addClass("show");
+        }
+    });
 });

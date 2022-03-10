@@ -1,21 +1,33 @@
 $(document).ready(function(){
     var programSwiper = new Swiper('.program-swiper', {
         slidesPerView : 'auto',
-        spaceBetween : 38, 
+        spaceBetween: 25,
         freeMode: true,
         grabCursor: true,
         scrollbar: {
             el: ".swiper-scrollbar",
         },
+        breakpoints: {
+            
+            768: {
+                spaceBetween : 38, 
+            },
+        },
     })
 
     var communitySwiper = new Swiper('.community-slide', {
         slidesPerView : 'auto',
-        spaceBetween : 38, 
+        spaceBetween: 25,
         freeMode: true,
         grabCursor: true,
         scrollbar: {
             el: ".swiper-scrollbar",
+        },
+        breakpoints: {
+            
+            768: {
+                spaceBetween : 38, 
+            },
         },
     })
 

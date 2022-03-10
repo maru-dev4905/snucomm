@@ -1,8 +1,8 @@
 /* style */
 
-main{
+/* main{
     overflow-x: hidden;
-}
+} */
 
 .sec-text > span{
     font-size: 17px;
@@ -386,8 +386,10 @@ main{
     padding: 50px 40px;
     position: relative;
     position: absolute;
-    transform: rotateY(0deg);
-    backface-visibility: hidden;
+    -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     transition: 0.75s;
     background-color: #fff;
     border-radius: 30px;
@@ -402,17 +404,23 @@ main{
     background: url("../images/icons/ico-cardPlus.svg") no-repeat center / cover;
 }
 .about-card.about-card-style1 li:hover .front{
-    transform: rotateY(180deg);
+
+    -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
 }
 .about-card.about-card-style2 .about-card-item:hover .front{
-    transform: rotateY(180deg);
+
+    -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
 }
 .snuapp .about-card li .back{
     background-color: #60DF7C;
 }
 .about-card li .back {
-    transform: rotateY(-180deg);
-    backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     transition: 0.75s;
     background-color: #0EBCF6;
     border-radius: 30px;
@@ -855,19 +863,28 @@ main{
 
 
 @media all and (max-width:768px){
+    .banner .circle{
+        display: none;
+    }
     .banner{
-        padding-top: 70px;
+        margin-top: 70px;
+        padding-top:0;
+        height: calc(100vh - 70px);
     }
     .banner .banner-slide{
         height: calc(100vh - 70px);
+        top: 0;
+        bottom: auto;
+        border-radius: 0;
+        width: 100vw;
     }
     .banner .inner{
         height: calc(100vh - 70px);
     }
     .banner-content{
         transform: none;
-        top: 152px;
-        height: calc(100% - 200px);
+        top: 90px;
+        height: calc(100% - 140px);
     }
     .banner-text h2{
         font-size: 25px;
@@ -875,11 +892,6 @@ main{
     }
     .banner-text p{
         font-size: 14px;
-    }
-
-    .banner .banner-slide{
-        border-radius: 0;
-        width: 100vw;
     }
     .banner .banner-slide::after{
         position: absolute;
@@ -920,6 +932,9 @@ main{
     .banner-slide-controller .banner-btn button{
         width: 32px;
         height: 32px;
+    }
+    .banner-slide-controller .banner-btn button:hover{
+        opacity: 1;
     }
     .banner-slide-controller .banner-btn button.prev-btn i{
         width: 32px;
@@ -980,16 +995,27 @@ main{
         right: -16px;
     }
 
+
+    .about .inner{
+        width: 100vw;
+    }
+    .about .sec-text{
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
     .about-card{
         margin-top: 42px;
         width: 100%;
+        padding: 0 20px;
         overflow-x: scroll;
-        touch-action: pan-x;
+        -ms-touch-action: pan-x;
+            touch-action: pan-x;
         pointer-events: auto;
     }
     .about-card ul{
         display: flex;
         width: max-content;
+        padding-right: 20px;
     }
     .about-card li{
         width: 300px;
@@ -1031,4 +1057,100 @@ main{
     .sticky-text{
         display: none;
     }
+
+    .program{
+        height: max-content;
+    }
+    .program .inner{
+        flex-direction: column;
+    }
+    .program .sec-text{
+        width: 100%;
+        border: none;
+    }
+    .program .sec-text{
+        padding: 70px 0 35px 0;
+    }
+    .program-tag{
+        width: 100%;
+        padding-left: 0;
+    }
+    .program-tag p{
+        font-size: 16px;
+        margin-bottom: 26px;
+    }
+    .program-tag ul{
+        margin-bottom: 70px;
+        width: 100%;
+    }
+    .program-tag ul li{
+        font-size: 12px;
+    }
+
+    .program-slide .tab-content{
+        width: calc(100vw - 40px);
+        padding: 4px;
+        top: -21px;
+    }
+    .program-slide .tab-content button{
+        font-size: 13px;
+        width: 81px;
+        height: 42px;
+    }
+    .program-slide{
+        padding-top: 55px;
+        padding-bottom: 70px;
+    }
+
+    .small-banner{
+        height: 180px;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    .small-banner h2{
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .small-banner a{
+        font-size: 13px;
+        width: 112px;
+        height: 44px;
+    }
+    .small-banner a:hover{
+        padding-right: 0;
+        background-color: transparent;
+        border: 1px solid #fff;
+    }
+    .small-banner a img{
+        display: none;
+    }
+
+    section.category{
+        display: none;
+    }
+    .community{
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    .community .sec-text{
+        min-width: 100%;
+    }
+    .community .inner{
+        flex-direction: column;
+    }
+    .community .community-slide{
+        width: 100% !important;
+    }
+    .community::before{
+        display: none;
+    }
+
+    .community-banner-sec{
+        display: none;
+    }
+    .main + footer{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
 }

@@ -1,8 +1,5 @@
 /* mypage */
 
-.myPage-header .inner{
-    position: relative;
-}
 .myPage-header .sub-menu{
     display: flex;
     gap: 48px;
@@ -243,23 +240,15 @@
 }
 
 
-.menu{
-    position: fixed;
+.myPage-header .menu{
+    position: absolute;
     right: 0;
-    top: 0;
-    width: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     height: 100px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 1000000000;
 }
-.menu.active{
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu-top{
+.myPage-header .menu-top{
     width: 100%;
     height: 100%;
     display: flex;
@@ -269,84 +258,22 @@
     font-size: 20px;
     font-weight: 600;
     color: #fff;
-    padding: 0 72px 0 55px;
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 10;
 }
-.menu.active .menu-top{
-    visibility: visible;
-    opacity: 1;
-}
-
-.menu a{
+.myPage-header .menu a{
     width: 100%;
     height: 100px !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: block;
-    margin-top: -1px;
-    position: relative;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    padding-left: 55px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
 }
-.menu a span{
-    position: absolute;
-    left: 55px;
-    z-index: 5;
-}
-
-.menu a::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: 0.3s ease;
-}
-.menu a:nth-child(2){
+.myPage-header .menu a:nth-child(2){
     background-image: url("../images/visual/menu-bg01.png");
-    transition-delay: 0.15s;
 }
-.menu a:nth-child(3){
+.myPage-header .menu a:nth-child(3){
     background-image: url("../images/visual/menu-bg02.png");
-    transition-delay: 0.25s;
 }
-.menu a:nth-child(4){
+.myPage-header .menu a:nth-child(4){
     background-image: url("../images/visual/menu-bg03.png");
-    transition-delay: 0.35s;
-}
-.menu.active a:nth-child(2){
-    top: 100%;
-    z-index: 5;
-}
-.menu.active a:nth-child(3){
-    top: 200%;
-    z-index: 4;
-}
-.menu.active a:nth-child(4){
-    top: 300%;
-    z-index: 3;
-}
-
-.menu a:hover::after{
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* mypage */
