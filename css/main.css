@@ -280,6 +280,9 @@
     height: 100%;
     width: auto;
 }
+.about .bg img.mo{
+    display: none;
+}
 .about .bg img:last-child{
     position: absolute;
     left: 0;
