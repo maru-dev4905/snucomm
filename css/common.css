@@ -1284,7 +1284,9 @@ section .inner{
 
 
 
-
+.sub header.subpage-header{
+    display: none;
+}
 
 
 @media all and (max-width:768px){
@@ -1724,5 +1726,41 @@ section .inner{
     }
     .snuapp .menu-box .depth2 .list button.show{
         color: #60DF7C;
+    }
+
+    header .sub-menu{
+        gap: 15px;
+    }
+    header .search-btn img{
+        width: 22px;
+        height: 22px;
+    }
+    .sub header{
+        display: none;
+    }
+    .sub header.subpage-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .sub header.subpage-header span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .page-path{
+        display: none;
+    }
+
+    .grid.card{
+        height: 332px;
+    }
+    .pagination{
+        margin-top: 50px;
+        margin-bottom: 70px;
     }
 }

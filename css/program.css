@@ -785,3 +785,110 @@ form.program-request-form input[readonly]:focus{
     margin-top: 30px;
 }
 /* precautions */
+
+
+
+
+@media all and (max-width:768px){
+    .program-list-filter .filter-list{
+        position: fixed;
+        top: 70px;
+        z-index: 10000000;
+        background-color: #fff;
+        width: 100vw;
+        height: 50px;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        left: 0;
+        padding: 0 20px;
+        gap: 0;
+    }
+    .program-list-filter .filter-list li{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .program-list-filter a{
+        font-size: 13px;
+    }
+
+    .program-list{
+        margin-top: 164px;
+    }
+    .program-list h2{
+        font-size: 24px;
+        margin-bottom: 42px;
+    }
+    .select-current{
+        z-index: 100000;
+    }
+    .select-list{
+        z-index: 10000;
+    }
+    .program-list-filter .filter-content .toggle{
+        position: relative;
+        width: 68px;
+        height: 38px;
+        font-size: 13px;
+    }
+    .program-list-filter .filter-content .toggle span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        text-align: center;
+    }
+    .program-list-filter .filter-content .toggle .toggle-content{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #e9e9e9;
+        left: 0;
+    }
+    .program-list-filter .filter-content .toggle .toggle-content .toggle-btn{
+        background-color: transparent !important;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        left: 0;
+    }
+    .program-list-filter .filter-content .toggle.active .toggle-btn{
+        left: 0;
+    }
+    .program-list-filter .filter-content .toggle.active .toggle-content{
+        background-color: transparent;
+        border: 1px solid #0EBCF6;
+    }
+    .program-list-filter .select-current img:first-child{
+        display: none;
+    }
+    .program-list-filter .select-current{
+        height: 38px;
+        border: 1px solid #e9e9e9;
+        border-radius: 30px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+    .program-list-filter .filter-content{
+        gap: 10px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .program-list-filter .select-list{
+        padding-top: 22px;
+    }
+    .select-list button{
+        font-size: 12px;
+    }
+    .program-list-filter{
+        padding-bottom: 20px;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .program-list-content{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+    }
+}
