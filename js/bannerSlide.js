@@ -34,6 +34,7 @@ $(document).ready(function(){
 
     nextBtn.click(function(){
         
+        stateLine.stop(true,false)
         if(slideIndex == bannerSlide.length){
             slideIndex = 1;
             slideCurrent.text(1);
@@ -52,6 +53,7 @@ $(document).ready(function(){
 
     prevBtn.click(function(){
         
+        stateLine.stop(true,false)
         if(slideIndex == 1){
             slideIndex = bannerSlide.length;
             slideCurrent.text(bannerSlide.length);

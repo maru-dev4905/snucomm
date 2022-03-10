@@ -1833,4 +1833,24 @@ section .inner{
     .community-card:hover i{
         background: url("../images/icons/ico-rightBlackArrow.svg") no-repeat center / cover;
     }
+
+    header .logo-select-btn i{
+        background: url("../images/icons/ico-logoSelectArrow-mo.svg") no-repeat center / cover;
+    }
+
+    .snuapp .community-card:hover{
+        background-color: #fff;
+    }
+    .snuapp .community-card:hover .kind{
+        color: #60DF7C;
+    }
+    .snuapp .community-card:hover .card-wed{
+        color: #60DF7C;
+    }
+    .snuapp .community-card i{
+        background: url(../images/icons/ico-rightBlackArrow.svg) no-repeat center / cover;
+    }
+    .snuapp .community-card:hover i{
+        background: url(../images/icons/ico-rightBlackArrow.svg) no-repeat center / cover;
+    }
 }

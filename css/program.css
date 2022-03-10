@@ -646,9 +646,15 @@ form.program-request-form input[readonly]:focus{
     display: block;
     font-weight: 300;
 }
-.program-detail-desc .content.contents tbody tr:nth-child(even){
+.program-detail-desc .content.contents tbody{
     border-bottom: 1px solid #e9e9e9;
 }
+.program-detail-desc .content.contents tbody tr:nth-child(even){
+    border-bottom: 1px solid #e9e9e9;
+    position: relative;
+    z-index: 0;
+}
+
 .program-detail-desc .content.contents tbody tr.bg{
     background-color: #FCFCFC;
 }
@@ -664,6 +670,9 @@ form.program-request-form input[readonly]:focus{
     gap: 15px;
     align-items: center;
     margin-bottom: 33px;
+}
+.program-detail-desc .content.teacher li:last-child{
+    margin-bottom: 0;
 }
 .program-detail-desc .content.teacher li .teacher-img{
     min-width: 68px;
@@ -784,6 +793,23 @@ form.program-request-form input[readonly]:focus{
 .precautions-content:last-child{
     margin-top: 30px;
 }
+.precautions-content p{
+    display: flex;
+}
+.precautions-content p:first-child::before{
+    display: none;
+}
+.precautions-content p::before{
+    content: "*";
+    /* max-width: 3px;
+    max-height: 3px;
+    min-width: 3px;
+    min-height: 3px; */
+    /* background-color: #333; */
+    display: block;
+    margin-top: 3px;
+    margin-right: 4px;
+}
 /* precautions */
 
 
@@ -797,7 +823,6 @@ form.program-request-form input[readonly]:focus{
         background-color: #fff;
         width: 100vw;
         height: 50px;
-        border-top: 1px solid #e9e9e9;
         border-bottom: 1px solid #e9e9e9;
         left: 0;
         padding: 0 20px;
@@ -822,6 +847,7 @@ form.program-request-form input[readonly]:focus{
     }
     .select-current{
         z-index: 100000;
+        font-size: 13px;
     }
     .select-list{
         z-index: 10000;
@@ -875,6 +901,7 @@ form.program-request-form input[readonly]:focus{
         gap: 10px;
         justify-content: flex-end;
         width: 100%;
+        display: none;
     }
     .program-list-filter .select-list{
         padding-top: 22px;
@@ -886,6 +913,7 @@ form.program-request-form input[readonly]:focus{
         padding-bottom: 20px;
         border-bottom: none;
         margin-bottom: 0;
+        padding: 0;
     }
     .program-list-content{
         grid-template-columns: repeat(1,1fr);
@@ -928,6 +956,7 @@ form.program-request-form input[readonly]:focus{
         top: auto;
         width: 100%;
         height: max-content;
+        padding-bottom: 40px;
     }
     .program-single .col:last-child .program-sticky{
         display: none;
@@ -1048,6 +1077,8 @@ form.program-request-form input[readonly]:focus{
     .precautions li::before{
         min-width: 3px;
         min-height: 3px;
+        max-width: 3px;
+        max-height: 3px;
     }
     .precautions-open-btn{
         font-size: 12px;
@@ -1059,11 +1090,27 @@ form.program-request-form input[readonly]:focus{
     }
     .precautions-content p{
         padding-left: 13px;
+        display: flex;
     }
     .precautions-content p:first-child{
         padding: 0;
         font-weight: 500;
         margin-bottom: 10px;
+    }
+    .precautions-content p:first-child::before{
+        display: none;
+    }
+    .precautions-content p::before{
+        content: "";
+        max-width: 3px;
+        max-height: 3px;
+        min-width: 3px;
+        min-height: 3px;
+        background-color: #333;
+        display: block;
+        border-radius: 100%;
+        margin-top: 10px;
+        margin-right: 4px;
     }
 
 
@@ -1085,6 +1132,7 @@ form.program-request-form input[readonly]:focus{
     }
     .program-request-wrap .program-desc p{
         font-size: 13px;
+        font-weight: 400;
     }
     .program-request-wrap .program-desc p br{
         display: none;
@@ -1099,9 +1147,11 @@ form.program-request-form input[readonly]:focus{
     }
     .program-request-form input[type="text"].name-input{
         width: 100%;
+        font-size: 13px;
     }
     .program-request-form .school-input{
         width: calc(100% - 123px);
+        font-size: 13px;
     }
     .program-request-form .program-request-btn{
         font-size: 14px;
@@ -1120,8 +1170,8 @@ form.program-request-form input[readonly]:focus{
         height: 100px;
     }
     .program-request-success-wrap h2{
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 24px;
+        margin-bottom: 18px;
         font-size: 20px;
     }
     .program-request-success-wrap p{
@@ -1147,6 +1197,7 @@ form.program-request-form input[readonly]:focus{
     .program-request-success-wrap .link-group a{
         height: 48px;
         font-size: 14px;
+        font-weight: 400;
     }
     .program-request-success-wrap .waitNumber{
         width: 100px;
@@ -1160,5 +1211,21 @@ form.program-request-form input[readonly]:focus{
     }
     .program-request-success-wrap .link-group a:first-child img{
         height: 13px;
+    }
+    .program-detail-desc .content.desc p{
+        line-height: 1.75;
+    }
+    .program-detail-desc .content.contents{
+        overflow: hidden;
+    }
+    .program-detail-desc .content.contents td.desc{
+        padding: 20px 42px 20px 5px;
+    }
+    .program-detail-desc .content.contents thead{
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+    }
+    .program-request-success-wrap .link-group a:first-child{
+        border: 1px solid #0EBCF6;
     }
 }
