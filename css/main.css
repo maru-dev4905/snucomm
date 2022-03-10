@@ -1,8 +1,8 @@
 /* style */
 
-/* main{
+main.snuapp{
     overflow-x: hidden;
-} */
+}
 
 .sec-text > span{
     font-size: 17px;
@@ -1156,4 +1156,37 @@
         padding-bottom: 60px;
     }
     
+
+    .about-card.about-card-style2 li .about-card-item.design-card{
+        display: none;
+    }
+    .about-card.about-card-style2 li:first-child, 
+    .about-card.about-card-style2 li:last-child{
+        margin-top: 0;
+    }
+    .about-card.about-card-style2 li{
+        display: flex;
+    }
+    .about-card.about-card-style2{
+        position: static;
+        margin-top: 42px;
+    }
+    .about-card.about-card-style2 li .about-card-item{
+        width: 300px;
+    }
+    .about-card.about-card-style2 li:nth-child(2){
+        margin-top: 0;
+    }
+    .about-card li .back{
+        height: 300px;
+    }
+    .snuapp .about .inner{
+        padding-bottom: 70px;
+    }
+    .snuapp .program-tag ul{
+        width: 100%;
+    }
+    .snuapp .small-banner{
+        background-attachment: scroll;
+    }
 }

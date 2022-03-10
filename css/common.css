@@ -1712,5 +1712,17 @@ section .inner{
     .menu-box.login .depth1{
         padding-top: 130px;
     }
-    
+
+    .snuapp .menu-box::before{
+        background-color: #60DF7C;
+    }
+    .snuapp .menu-box > ul > li.active > button{
+        color: #60DF7C;
+    }
+    .menu-box .depth1 > li > button i{
+        background: url("../images/icons/ico-rightGreenArrow.svg") no-repeat center / cover;
+    }
+    .snuapp .menu-box .depth2 .list button.show{
+        color: #60DF7C;
+    }
 }
