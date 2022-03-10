@@ -1422,7 +1422,7 @@ section .inner{
     }
     footer .footer-bottom .footer-select-btn{
         font-size: 11px;
-        color: #999;
+        color: #999 !important;
         margin: 0 auto;
     }
     .footer-select-btn img{
@@ -1432,14 +1432,14 @@ section .inner{
     }
     .footer-select-content{
         font-size: 10px;
-        color: #999;
+        color: #999 !important;
         gap: 9px;
         text-align: center;
         justify-content: center;
     }
     footer .copyright{
         font-size: 11px;
-        color: #999;
+        color: #999 !important;
         text-align: center;
     }
     footer .footer-content h2{
