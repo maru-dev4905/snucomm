@@ -454,6 +454,9 @@ form.program-request-form input[readonly]:focus{
     flex-direction: column;
     justify-content: space-between;
 }
+.program-single .program-sticky.mo{
+    display: none;
+}
 .program-single .program-sticky .kind{
     color: #0EBCF6;
     font-size: 17px;
@@ -1227,5 +1230,10 @@ form.program-request-form input[readonly]:focus{
     }
     .program-request-success-wrap .link-group a:first-child{
         border: 1px solid #0EBCF6;
+    }
+
+
+    .program-single .program-sticky.mo{
+        display: flex;
     }
 }
