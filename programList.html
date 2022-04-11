@@ -88,19 +88,35 @@
     </header>
     <main class="program programList">
         <div class="page-path">
-            <ul class="inner">
-                <li>
-                    <img src="./images/icons/ico-home.svg" alt="home icon">
-                </li>
-                <li>
-                    수강신청
-                </li>
-                <li>
-                    <button class="page-path-btn">
-                        <img src="./images/icons/ico-selectArrow.svg" alt="select arrow">
-                    </button>
-                </li>
-            </ul>
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="./images/icons/ico-home.svg" alt="home icon">
+                    </li>
+                    <li class="current">
+                        수강신청
+                    </li>
+                    <li>
+                        <button class="page-path-btn">
+                            <img src="./images/icons/ico-selectArrow.svg" alt="select arrow">
+                        </button>
+                    </li>
+                </ul>
+                <ul class="page-select select-list">
+                    <li>
+                        <a href="#">소개</a>
+                    </li>
+                    <li>
+                        <a href="#">수강신청</a>
+                    </li>
+                    <li>
+                        <a href="#">정보마당</a>
+                    </li>
+                    <li>
+                        <a href="#">자료실</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <section class="program-list">
             <div class="inner">
@@ -111,6 +127,76 @@
                 </h2>
             </div>
             <!-- <img class="program-list-img" src="./images/visual/program-list-visual.png" alt="program-list-visual"> -->
+            <div class="inner">
+ 
+                <ul class="category-list">
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>초등</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li><a href="#">영어</a></li>
+                                <li><a href="#">뮤지컬</a></li>
+                                <li><a href="#">천문</a></li>
+                                <li><a href="#">독서</a></li>
+                                <li><a href="#">문학</a></li>
+                                <li><a href="#">장애체육</a></li>
+                                <li><a href="#">역사</a></li>
+                                <li><a href="#">수학</a></li>
+                                <li><a href="#">미술</a></li>
+                                <li><a href="#">체육</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>중등</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li><a href="#">코딩</a></li>
+                                <li><a href="#">뮤지컬</a></li>
+                                <li><a href="#">중국역사</a></li>
+                                <li><a href="#">심리</a></li>
+                                <li><a href="#">영어</a></li>
+                                <li><a href="#">융합과학</a></li>
+                                <li><a href="#">진로체험</a></li>
+                                <li><a href="#">체육</a></li>
+                                <li><a href="#">융합체육</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>합창</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li class="share"><a href="#">
+                                    <i></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>학부모</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li class="share"><a href="#">
+                                    <i></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="inner">
                 <div class="program-list-filter">
                     <ul class="filter-list">
@@ -151,16 +237,10 @@
                             </div>
                             <ul class="select-list">
                                 <li>
-                                    <button type="button" class="select-item">전체</button>
+                                    <button type="button" class="select-item">신청 마감일순</button>
                                 </li>
                                 <li>
-                                    <button type="button" class="select-item">일주일뒤</button>
-                                </li>
-                                <li>
-                                    <button type="button" class="select-item">한달뒤</button>
-                                </li>
-                                <li>
-                                    <button type="button" class="select-item">일년뒤</button>
+                                    <button type="button" class="select-item">최신순</button>
                                 </li>
                             </ul>
                         </div>
@@ -176,10 +256,16 @@
                                     <br>
                                     (A반: 초등 1~2학년)
                                 </h3>
-                                <p class="date-wrap">
-                                    <span class="dDay">D-12</span>
-                                    <span class="date">2022.01.29</span>
-                                </p>
+                                <div class="date-wrap">
+                                    <div class="accept">
+                                        <span>접수</span>
+                                        <p class="hov">2020-02-01 16:30</p>
+                                        <p>D+1</p>
+                                    </div>
+                                    <div class="deadline">
+                                        <span>마감 D-12</span>
+                                    </div>
+                                </div>
                                 <div class="card-state">
                                     <p class="state-number clear-state1">
                                         <span class="current">31</span>
@@ -188,7 +274,10 @@
                                     </p>
                                     <div class="wave"></div>
                                 </div>
-                                <i></i>
+                                <div class="address">
+                                    <i></i>
+                                    <span>남부교육장</span>
+                                </div>
                             </div>
                             <div class="card-bg">
                                 <img src="./images/visual/card-bg01.png" alt="card bg">
@@ -525,7 +614,7 @@
                     <ul>
                         <li>
                             <a href="#">
-                                센터소개
+                                교육협력센터
                                 <img src="./images/icons/ico-footerArrow.svg" alt="footer arrow">
                             </a>
                         </li>
@@ -544,20 +633,29 @@
                     </ul>
                 </nav>
                 <div class="footer-content">
-                    <h2>
+                    <!-- <h2>
                         Contact
                         <img src="./images/icons/ico-footerSelectArrow.svg" alt="select arrow">
-                    </h2>
+                    </h2> -->
                     <ul>
                         <li>
-                            <span>스누콤</span>
+                            <div class="footer-content-title">
+                                <span>스누콤</span>
+                                <p>평일 14:00 - 17:00</p>
+                            </div>
                             <a href="tel:02-880-4472">02-880-4472</a>
-                            <p>문의시간 평일 2시~5시 PM</p>
+                            <a href="tel:02-880-7655">02-880-7655</a>
+                            <a href="#" class="kakaoCh">
+                                <i></i>
+                                스누콤센터 카카오 상담
+                            </a>
                         </li>
                         <li>
-                            <span>스누앱</span>
+                            <div class="footer-content-title">
+                                <span>스누앱</span>
+                                <p>평일 14:00 - 17:00</p>
+                            </div>
                             <a href="tel:02-880-4472">02-880-4472</a>
-                            <p>문의시간 평일 2시~5시 PM</p>
                         </li>
                     </ul>
                 </div>
