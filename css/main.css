@@ -65,12 +65,12 @@ main.snuapp{
     transform: translateX(10px);
 }
 
-.main + footer{
+/* .main + footer{
     padding-top: 246px;
-}
-.main.snuapp + footer{
+} */
+/* .main.snuapp + footer{
     padding-top: 140px;
-}
+} */
 
 .sticky-text{
     position: fixed;
@@ -98,8 +98,12 @@ main.snuapp{
     position: absolute;
     left: -300px;
     bottom: 164px;
-    width:  422px;
-    height: 422px;
+    bottom: auto;
+    top: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:  450px;
+    height: 450px;
     border-radius: 100%;
     background-color: #0EBCF6;
 }
@@ -109,19 +113,24 @@ main.snuapp{
 
 .banner{
     height: 100vh;
-    padding-top: 100px;
+    height: 808px;
+    margin-top: 100px;
     position: relative;
     z-index: 10;
 }
 .banner .banner-slide{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: auto;
+    top: 0;
     z-index: 0;
     border-radius: 300px 0 0 300px;
     overflow: hidden;
     width: 1070px;
+    width: 1000px;
     height: calc(100% - 100px);
+    height: 808px;
+    height: 100%;
 }
 .banner .banner-slide li{
     width: 100%;
@@ -146,13 +155,14 @@ main.snuapp{
     width: calc(100% - 40px);
     max-width:1434px;
     height: calc(100% - 100px);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .banner-content{
     position: absolute;
-    top: calc(50% + 100px);
+    top: calc(50% + 60px);
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -163,16 +173,17 @@ main.snuapp{
     position: relative;
     z-index: 1;
     margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 .banner-text h2{
-    font-size: 72px;
+    font-size: 52px;
     font-family: "Montserrat";
     font-weight: 700;
     letter-spacing: -0.2px;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 }
 .banner-text p{
-    font-size: 23px;
+    font-size: 22px;
     font-family: "Montserrat";
     font-weight: 300;
     color: #454545;
@@ -269,9 +280,9 @@ main.snuapp{
 .about .bg{
     position: absolute;
     width: 100vw;
-    height: 100%;
+    height: calc(100% + 70px);
     z-index: 0;
-    top: 0;
+    top: -70px;
 }
 .about .bg img:first-child{
     position: absolute;
@@ -298,10 +309,11 @@ main.snuapp{
 }
 .about .sec-text{
     padding-top: 240px;
+    padding-top: 295px;
 }
 
 .about-card {
-    margin-top: 160px;
+    margin-top: 190px;
     position: relative;
     z-index: 1000;
 }
@@ -420,6 +432,8 @@ main.snuapp{
     background-color: #60DF7C;
 }
 .about-card li .back {
+    position: absolute;
+    width: 100%;
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
     -webkit-backface-visibility: hidden;
@@ -430,6 +444,7 @@ main.snuapp{
     box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.04);
     height: 100%;
     padding: 50px 40px;
+    overflow: hidden;
 }
 .about-card.about-card-style2 .about-card-item:hover .back {
     transform: rotateY(0);
@@ -437,6 +452,232 @@ main.snuapp{
 .about-card.about-card-style1 li:hover .back {
     transform: rotateY(0);
 }
+
+
+
+
+.about-card [class*="about-card-anim"]{
+    margin-bottom: 35px;
+    position: relative;
+}
+.about-card .about-card-anim1{
+    height: 55px;
+    width: 95px;
+}
+.about-card .about-card-anim1 span{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    opacity: 0.65;
+    position: absolute;
+}
+.about-card .about-card-anim1 span:nth-child(1){
+    background-color: #0EBCF6;
+    left: -1px;
+    animation: aboutCardAnim1_1 3.6s infinite;  
+}
+.about-card .about-card-anim1 span:nth-child(2){
+    background-color: #6DF5D0;
+    left: 40px;
+    animation: aboutCardAnim1_2 3.6s infinite;  
+}
+.about-card .back .about-card-anim1 span:nth-child(1){
+    background-color: #fff;
+}
+.about-card .back .about-card-anim1 span:nth-child(2){
+    background-color: #6DF5D0;
+}
+@keyframes aboutCardAnim1_1 {
+    0% {transform: translate(0,0)}
+    50% {transform: translate(40px,0);}
+    100% {transform: translate(0,0)}
+}
+@keyframes aboutCardAnim1_2 {
+    0% {transform: translate(0,0)}
+    50% {transform: translate(-40px,0);}
+    100% {transform: translate(0,0)}
+}
+
+
+.about-card .about-card-anim2{
+    width: 55px;
+    height: 55px;
+}
+.about-card .about-card-anim2 span{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.65;
+}
+.about-card .about-card-anim2 span:nth-child(1){
+    background-color: #C0EFFF;
+}
+.about-card .about-card-anim2 span:nth-child(2){
+    background-color: #0EBCF6;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0.3);        
+    animation: aboutCardAnim2 3.6s infinite;  
+}
+.about-card .back .about-card-anim2 span:nth-child(2){
+    background-color: #fff;
+}
+
+@keyframes aboutCardAnim2{
+    0% {transform: translate(-50%,-50%) scale(0.3) }
+    50% {transform: translate(-50%,-50%) scale(1);}
+    100% {transform: translate(-50%,-50%) scale(0.3)}
+}
+
+
+
+
+.about-card .about-card-anim3{
+    width: 92px;
+    height: 70px;
+}
+.about-card .about-card-anim3 span{
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.65;
+}
+.about-card .about-card-anim3 span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    background-color: #0EBCF6;
+    animation: aboutCardAnim3_1 3.6s infinite;  
+    z-index: 10;
+}
+.about-card .about-card-anim3 span:nth-child(2){
+    left: 50%;
+    top: 50%;
+    background-color: #C0EFFF;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+.about-card .about-card-anim3 span:nth-child(3){
+    right: 0;
+    top: 0;
+    background-color: #6DF5D0;
+    animation: aboutCardAnim3_2 3.6s infinite;  
+    z-index: 2;
+}
+.about-card .back .about-card-anim3 span:nth-child(1){
+    background-color: #fff;
+}
+@keyframes aboutCardAnim3_1{
+    0% {
+        left: 0;
+        bottom: 0;
+        transform: translate(0,0); 
+    }
+    50% {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%,50%);
+    }
+    100% {
+        left: 0%;
+        bottom: 0%;
+        transform: translate(0%,0%); 
+    }    
+}
+@keyframes aboutCardAnim3_2{
+    0% {
+        top: 0;
+        right: 0;
+        transform: translate(0,0); 
+    }
+    50% {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+    }
+    100% {
+        top: 0%;
+        right: 0%;
+        transform: translate(0%,0%); 
+    }    
+}
+
+
+
+
+.about-card .about-card-anim4{
+    width: 71px;
+    height: 60px;
+}
+.about-card .about-card-anim4 span{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.65;
+}
+.about-card .about-card-anim4 span:nth-child(1){
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+    background-color: #0EBCF6;
+    animation: aboutCardAnim4_1 3.6s infinite;    
+}
+.about-card .about-card-anim4 span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    transform: translate(0,0);
+    background-color: #C0EFFF;
+    animation: aboutCardAnim4_2 3.6s infinite;    
+}
+.about-card .about-card-anim4 span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    transform: translate(0,0);
+    background-color: #6DF5D0;
+    animation: aboutCardAnim4_3 3.6s infinite;    
+}
+.about-card .back .about-card-anim4 span:nth-child(1){
+    background-color: #fff;
+}
+
+
+
+@keyframes aboutCardAnim4_1{
+    0%{
+        transform: translate(-50%, 0);
+    }
+    50%{
+        transform: translate(-50%, -50%);
+    }
+    100%{
+        transform: translate(-50%, 0);
+    }
+}
+@keyframes aboutCardAnim4_2{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(-50%,50%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+@keyframes aboutCardAnim4_3{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(50%,50%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
 
 /* main about */
 
@@ -596,7 +837,7 @@ main.snuapp{
 
 
 /* main category */
-
+/* 
 .category{
     padding: 130px 0;
 }
@@ -673,7 +914,7 @@ main.snuapp{
 }
 .category-list > li:last-child a:last-child{
     background-color: #5662CC;
-}
+} */
 
 /* main category */
 
@@ -770,7 +1011,7 @@ main.snuapp{
 .community::before{
     content: "";
     position: absolute;
-    width: 500px;
+    width: 700px;
     height: calc(100% - 180px);
     top: 0;
     left: 0;

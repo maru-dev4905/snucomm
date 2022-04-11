@@ -55,4 +55,17 @@ $(document).ready(function(){
             footerContent.addClass("show");
         }
     });
+
+
+    var pageSelectBtn   = $(".page-path-btn");
+    var pageSelect      = $(".page-select");
+    
+    pageSelectBtn.click(function(){
+        if(pageSelect.hasClass("show")){
+            pageSelect.removeClass("show");
+        }else{
+            pageSelect.addClass("show");
+        }
+    });
+    
 });
