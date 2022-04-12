@@ -556,7 +556,7 @@ footer .kakaoCh i{
 .programList .page-path{
     padding-top: 260px;
 }
-.notice .page-path{
+.list-cont .page-path{
     padding-top: 0;
     position: absolute;
     bottom: 0;
@@ -564,7 +564,7 @@ footer .kakaoCh i{
     max-width: max-content;
     width: max-content;
 }
-.notice-single .page-path{
+.single .page-path{
     position: relative;
     margin: 0 0 40px 0;
 }
@@ -1211,6 +1211,83 @@ section .inner.st2{
 .community-card:hover i{
     background: url("../images/visual/card-arrow.svg") no-repeat center / cover;
 }
+
+
+
+
+.card.news-card{
+    box-shadow: none !important;
+    border: none !important;
+    transform: none !important;
+    filter: none !important;
+    padding: 0;
+}
+.card.news-card i{
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/ico-eyeGray.svg") no-repeat center / cover;
+}
+.card.news-card .img-cont{
+    height: 230px;
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 37px;
+}
+.card.news-card .bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.card.news-card .bg.snucomm-cardDefault{
+    background-color: #F4FBFF;
+}
+.card.news-card .bg.snuep-cardDefault{
+    background-color: #EEFFF2;
+}
+.card.news-card .card-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card.news-card .card-desc .date{
+    width: max-content;
+    height: auto;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #c7c7c7;
+    border: none;
+}
+.card.news-card .number{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #c7c7c7;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+.card.news-card .number i{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url("../images/icons/ico-eyeGray.svg") no-repeat center / cover;
+}
+.card.news-card .card-title{
+    font-size: 18px;
+    color: #000;
+    font-family: "Noto Sans Kr";
+    font-weight: 600;
+    line-height: 1.5;
+}
+.card.news-card a{
+    margin-top: 35px;
+}
+
 
 /* card */
 
@@ -2302,5 +2379,32 @@ section .inner.st2{
 .blue-strok-btn:hover i{
     background: url("../images/icons/ico-rightWhiteArrow2.svg") no-repeat center / cover;
 }
+
+
+
+.gray-strok-btn{
+    width: max-content;
+    height: 50px !important;
+    padding: 0 50px;
+    border-radius: 50px;
+    border:  1px solid #E1E1E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #5E5E5E;
+    font-weight: 600;
+    font-family: "Noto Sans Kr";
+    margin: 0 auto;
+    transition: 0.3s ease;
+    margin: 0;
+}
+.gray-strok-btn:hover{
+    background-color: #0EBCF6 !important;
+    color: #fff !important;
+    border: 1px solid #0EBCF6 !important;
+}
+
 
 /* button */
