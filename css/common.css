@@ -679,6 +679,9 @@ section .inner{
 section .inner.st2{
     max-width: 978px;
 }
+section .inner.st3{
+    max-width: 580px;
+}
 
 .dim{
     position: fixed;
@@ -726,6 +729,7 @@ section .inner.st2{
     display: flex;
     justify-content: center;
     padding-top: 172px;
+    padding-top: 146px;
 }
 .search-box .col{
     width: calc(100% - 40px);
@@ -1315,7 +1319,7 @@ section .inner.st2{
     background-color: #0EBCF6;
     z-index: 100000000;
     transition: 0.5s ease;
-    padding-left: 108px;
+    padding-left: 100px;
     padding-bottom: 52px;
     height: 100vh;
     width: 890px;
@@ -1335,7 +1339,7 @@ section .inner.st2{
 .menu-box > ul{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 326px;
     position: relative;
 }
 .menu-box > ul > li{
@@ -1349,7 +1353,7 @@ section .inner.st2{
 .menu-box > ul > li > a{
     color: #fff;
     padding-bottom: 34px;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     transition: 0.3s ease;
     display: block;
@@ -1359,9 +1363,9 @@ section .inner.st2{
 }
 .menu-box > ul > li > a + ul{
     position: absolute;
-    left: 280px;
+    left: 200px;
     right: 0;
-    top: 10px;
+    top: 5px;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
@@ -1502,6 +1506,9 @@ section .inner.st2{
 
 /* pagination */
 
+.qna .pagination{
+    margin-top: 0;
+}
 .pagination{
     display: flex;
     align-items: center;
@@ -2445,6 +2452,27 @@ section .inner.st2{
 }
 
 
+.fill-blue-btn{
+    width: max-content;
+    height: 60px !important;
+    padding: 0 30px;
+    border-radius: 10px;
+    border:  1px solid #0EBCF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Noto Sans Kr";
+    margin: 0 auto;
+    transition: 0.3s ease;
+    margin: 0;
+    background-color: #0EBCF6;
+}
+
+
 /* button */
 
 
@@ -2496,3 +2524,54 @@ section .inner.st2{
 }
 
 /* small banner */
+
+
+
+
+/* icon */
+
+.pencil-ico{
+    width: 21px !important;
+    height: 21px !important;
+    background: url("../images/icons/ico-pencil.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.message-ico{
+    width: 15px !important;
+    height: 15px !important;
+    background: url("../images/icons/ico-message.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+.message-ico.st2{
+    width: 35px !important;
+    height: 35px !important;
+    background: url("../images/icons/ico-message2.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.search-ico{
+    width: 32px !important;
+    height: 32px !important;
+    background: url("../images/icons/ico-searchBlue.svg") no-repeat center / cover !important;
+    display: block;
+    position: static;
+    transform: none;
+}
+
+.noResult-ico{
+    width: 70px !important;
+    height: 70px !important;
+    background: url("../images/icons/ico-noResult.svg") no-repeat center / cover !important;
+    display: block;
+    position: static;
+    transform: none;
+}
+
+/* icon */

@@ -4,7 +4,11 @@ $(document).ready(function(){
     accordionBtn.click(function(){
         var th = $(this);
 
-        accordionBtn.removeClass("show");
-        th.addClass("show");
+        if(th.hasClass("show")){
+            th.removeClass("show");
+        }else{
+            accordionBtn.removeClass("show");
+            th.addClass("show");
+        }
     });
 })

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울대학교 교육협력센터</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- swiper.js cdn -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo-select">
+                <button class="logo-select-btn">
+                    <i></i>
+                </button>
+                <a href="#" class="current-logo">
+                    <img src="./images/common/logo2.svg" alt="logo">
+                </a>
+                <ul class="logo-list">
+                    <li>
+                        <button class="logo-select-item">
+                            <img src="./images/common/logo.svg" alt="logo">
+                        </button>
+                    </li>
+                    <li class="active">
+                        <button class="logo-select-item">
+                            <img src="./images/common/logo2.svg" alt="logo">
+                        </button>
+                    </li>
+                    <li class="">
+                        <button class="logo-select-item">
+                            <img src="./images/common/snuappLogo.svg" alt="logo">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#">소개</a>
+                    </li>
+                    <li>
+                        <a href="#">수강신청</a>
+                    </li>
+                    <li>
+                        <a href="#">정보마당</a>
+                    </li>
+                    <li>
+                        <a href="#">자료실</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sub-menu">
+                <a href="#" class="profile">
+                    <img src="./images/profile/profile01.png" alt="profile">
+                    <span>
+                        CEC 통합 로그인
+                    </span>
+                </a>
+                <button class="search-btn">
+                    <img src="./images/icons/ico-search.svg" alt="search icon">
+                </button>
+                <button class="menu-open-btn">
+                    <img src="./images/icons/ico-menu.svg" alt="menu icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="about">
+        <section class="page-title">
+            <div class="inner">
+                <p>센터소개</p>
+                <div class="col">
+                    <h3>
+                        <span>
+                            한국 공교육 발전의 중심,
+                            <br>
+                            서울대학교 스누콤센터
+                        </span>
+                    </h3>
+                    <p>
+                        서울대학교 사범대학이 학교 현장, 교육행정기관, 지자체와의 파트너쉽을 통해 학교 교육의 성장과 발전을 함께 하고자 하는 프로그램입니다. 서울대학교 교육 파트너쉽(Seoul National University Education Partnership)은 편의상 ‘SNUEP’로 줄여 ‘스누앱’이라 부릅니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="col3-banner">
+            <div class="bg-cont">
+                <div class="bg" style="background-image:url(./images/visual/about-banner01.png)"></div>
+                <div class="bg" style="background-image:url(./images/visual/about-banner02.png)"></div>
+                <div class="bg" style="background-image:url(./images/visual/about-banner03.png)"></div>
+            </div>
+        </section>
+        <section class="shape">
+            <div class="sec-text">
+                <div class="inner">
+                    <span>Our Value</span>
+                    <h2>
+                        스누콤센터는 
+                        <br>
+                        <span>대학과 지역사회</span>가 <span>교육</span>을 통해 
+                        <br>
+                        <span>상생 발전</span>하도록 지원합니다.                    
+                    </h2>
+                </div>
+            </div>
+            <div class="shape-cont">
+                <div class="inner">
+                    <div class="shape">
+                        <div class="content">
+                            <h3>professionalism</h3>
+                            <h4>전문성</h4>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="content">
+                            <h3>Customized</h3>
+                            <h4>맞춤형</h4>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="content">
+                            <h3>Linked</h3>
+                            <h4>연계</h4>
+                        </div>
+                    </div>
+                    <div class="shape">
+                        <div class="content">
+                            <h3>Linked</h3>
+                            <h4>연계</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="category">
+            <div class="inner">
+                <div class="sec-text">
+                    <span>Category</span>
+                    <h2>
+                        <span>SNUComm Program</span>                     
+                    </h2>
+                </div>
+                <ul class="category-list">
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>초등</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li><a href="#">영어</a></li>
+                                <li><a href="#">뮤지컬</a></li>
+                                <li><a href="#">천문</a></li>
+                                <li><a href="#">독서</a></li>
+                                <li><a href="#">문학</a></li>
+                                <li><a href="#">장애체육</a></li>
+                                <li><a href="#">역사</a></li>
+                                <li><a href="#">수학</a></li>
+                                <li><a href="#">미술</a></li>
+                                <li><a href="#">체육</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>중등</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li><a href="#">코딩</a></li>
+                                <li><a href="#">뮤지컬</a></li>
+                                <li><a href="#">중국역사</a></li>
+                                <li><a href="#">심리</a></li>
+                                <li><a href="#">영어</a></li>
+                                <li><a href="#">융합과학</a></li>
+                                <li><a href="#">진로체험</a></li>
+                                <li><a href="#">체육</a></li>
+                                <li><a href="#">융합체육</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>합창</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li class="share"><a href="#">
+                                    <i></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-card-front">
+                            <div class="bg"></div>
+                            <span>학부모</span>
+                        </div>
+                        <div class="category-card-content">
+                            <ul>
+                                <li class="share"><a href="#">
+                                    <i></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-top">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                교육협력센터
+                                <img src="./images/icons/ico-footerArrow.svg" alt="footer arrow">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                스누콤
+                                <img src="./images/icons/ico-footerArrow.svg" alt="footer arrow">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                스누앱
+                                <img src="./images/icons/ico-footerArrow.svg" alt="footer arrow">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-content">
+                    <!-- <h2>
+                        Contact
+                        <img src="./images/icons/ico-footerSelectArrow.svg" alt="select arrow">
+                    </h2> -->
+                    <ul>
+                        <li>
+                            <div class="footer-content-title">
+                                <span>스누콤</span>
+                                <p>평일 14:00 - 17:00</p>
+                            </div>
+                            <a href="tel:02-880-4472">02-880-4472</a>
+                            <a href="tel:02-880-7655">02-880-7655</a>
+                            <a href="#" class="kakaoCh">
+                                <i></i>
+                                스누콤센터 카카오 상담
+                            </a>
+                        </li>
+                        <li>
+                            <div class="footer-content-title">
+                                <span>스누앱</span>
+                                <p>평일 14:00 - 17:00</p>
+                            </div>
+                            <a href="tel:02-880-4472">02-880-4472</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-select">
+                    <button class="footer-select-btn">
+                        서울대학교 교육협력센터 
+                        <img src="./images/icons/ico-footerSelectArrow.svg" alt="select arrow">
+                    </button>
+                    <div class="footer-select-content">
+                        <a href="#">개인정보처리방침</a>
+                        <p>08826 서울시 관악구 관악로 1, 서울대학교 사범대학</p>
+                    </div>
+                </div>
+                <p class="copyright">ⓒ Copyright by SNU CEC</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="search-box">
+        <button class="close-btn">
+            <img src="./images/icons/ico-close.svg" alt="close icon">
+        </button>
+        <form action="#" method="POST" id="search-form">
+            <div class="col">
+                <input class="search-input" type="text" placeholder="궁금하신 키워드를 검색해보세요">
+                <button class="search-btn">
+                    <img src="./images/icons/ico-searchBlue.svg" alt="search icon">
+                </button>
+            </div>
+        </form>
+        <div class="keyword-inner">
+            <p>추천 키워드</p>
+            <ul class="keyword">
+                <li>
+                    <a href="#">영어</a>
+                </li>
+                <li>
+                    <a href="#">뮤지컬</a>
+                </li>
+                <li>
+                    <a href="#">글짓기</a>
+                </li>
+                <li>
+                    <a href="#">중국역사</a>
+                </li>
+                <li>
+                    <a href="#">역사</a>
+                </li>
+                <li>
+                    <a href="#">장애체육</a>
+                </li>
+                <li>
+                    <a href="#">역사</a>
+                </li>
+                <li>
+                    <a href="#">뮤지컬</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-box">
+        <button class="close-btn">
+            <img src="./images/icons/ico-close2.svg" alt="close icon">
+        </button>
+        <ul>
+            <li>
+                <a href="#">스누콤 소개</a>
+                <ul>
+                    <li>
+                        <a href="#">스누콤이란</a>
+                    </li>
+                    <li>
+                        <a href="#">스누콤의 특장점</a>
+                    </li>
+                    <li>
+                        <a href="#">BI</a>
+                    </li>
+                    <li>
+                        <a href="#">프로그램 카테고리</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">수강신청</a>
+                <ul>
+                    <li>
+                        <a href="#">전체 프로그램</a>
+                    </li>
+                    <li>
+                        <a href="#">초등</a>
+                        <ul class="depth3">
+                            <li><a href="#">영어</a></li>
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">에세이</a></li>
+                            <li><a href="#">체육</a></li>
+                            <li><a href="#">천문</a></li>
+                            <li><a href="#">역사</a></li>
+                            <li><a href="#">외국어문화</a></li>
+                            <li><a href="#">수학</a></li>
+                            <li><a href="#">뮤지컬</a></li>
+                            <li><a href="#">미술</a></li>
+                            <li><a href="#">특수체육</a></li>
+                            <li><a href="#">논리</a></li>
+                            <li><a href="#">독서</a></li>
+                            <li><a href="#">코딩</a></li>
+                            <li><a href="#">가족체육</a></li>
+                            <li><a href="#">창의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">중등</a>
+                        <ul class="depth3">
+                            <li><a href="#">영어</a></li>
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">에세이</a></li>
+                            <li><a href="#">체육</a></li>
+                            <li><a href="#">천문</a></li>
+                            <li><a href="#">역사</a></li>
+                            <li><a href="#">외국어문화</a></li>
+                            <li><a href="#">수학</a></li>
+                            <li><a href="#">뮤지컬</a></li>
+                            <li><a href="#">미술</a></li>
+                            <li><a href="#">특수체육</a></li>
+                            <li><a href="#">논리</a></li>
+                            <li><a href="#">독서</a></li>
+                            <li><a href="#">코딩</a></li>
+                            <li><a href="#">가족체육</a></li>
+                            <li><a href="#">창의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">초중등</a>
+                        <ul class="depth3">
+                            <li><a href="#">영어</a></li>
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">에세이</a></li>
+                            <li><a href="#">체육</a></li>
+                            <li><a href="#">천문</a></li>
+                            <li><a href="#">역사</a></li>
+                            <li><a href="#">외국어문화</a></li>
+                            <li><a href="#">수학</a></li>
+                            <li><a href="#">뮤지컬</a></li>
+                            <li><a href="#">미술</a></li>
+                            <li><a href="#">특수체육</a></li>
+                            <li><a href="#">논리</a></li>
+                            <li><a href="#">독서</a></li>
+                            <li><a href="#">코딩</a></li>
+                            <li><a href="#">가족체육</a></li>
+                            <li><a href="#">창의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">학부모</a>
+                        <ul class="depth3">
+                            <li><a href="#">영어</a></li>
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">에세이</a></li>
+                            <li><a href="#">체육</a></li>
+                            <li><a href="#">천문</a></li>
+                            <li><a href="#">역사</a></li>
+                            <li><a href="#">외국어문화</a></li>
+                            <li><a href="#">수학</a></li>
+                            <li><a href="#">뮤지컬</a></li>
+                            <li><a href="#">미술</a></li>
+                            <li><a href="#">특수체육</a></li>
+                            <li><a href="#">논리</a></li>
+                            <li><a href="#">독서</a></li>
+                            <li><a href="#">코딩</a></li>
+                            <li><a href="#">가족체육</a></li>
+                            <li><a href="#">창의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul>
+                    <li>
+                        <a href="#">스누콤이란</a>
+                    </li>
+                    <li>
+                        <a href="#">스누콤의 특장점</a>
+                    </li>
+                    <li>
+                        <a href="#">BI</a>
+                    </li>
+                    <li>
+                        <a href="#">프로그램 카테고리</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">자료실</a>
+                <ul>
+                    <li>
+                        <a href="#">스누콤이란</a>
+                    </li>
+                    <li>
+                        <a href="#">스누콤의 특장점</a>
+                    </li>
+                    <li>
+                        <a href="#">BI</a>
+                    </li>
+                    <li>
+                        <a href="#">프로그램 카테고리</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-sub">
+            <div class="login-link">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+            <div class="social">
+                <a href="#">
+                    <img src="./images/icons/ico-kakaotalk.svg" alt="icon kakaotalk">
+                </a>
+                <a href="#">
+                    <img src="./images/icons/ico-instagram.svg" alt="icon instagram">
+                </a>
+            </div>
+        </div>
+        <img src="./images/visual/menu-visual.png" alt="menu visual" class="menu-img">
+    </div>
+    <div class="menu-box mo">
+        <div class="menu-box-login">
+            <p>스누콤과 함께 새로운 배움을 시작하세요.</p>
+            <a href="#">
+                회원가입/로그인하기
+                <img src="./images/icons/ico-rightWhiteArrow.svg" alt="white arrow icon">
+            </a>
+        </div>
+        <ul class="depth1">
+            <li>
+                <button href="#">
+                    스누콤 소개
+                    <i></i>
+                </button>
+            </li>
+            <li class="active">
+                <button href="#">
+                    수강신청
+                    <i></i>
+                </button>
+            </li>
+            <li>
+                <button href="#">
+                    커뮤니티
+                    <i></i>
+                </button>
+            </li>
+            <li>
+                <button href="#">
+                    자료실
+                    <i></i>
+                </button>
+            </li>
+        </ul>
+        <div class="depth2">
+            <div class="top">
+                <button class="back-btn">
+                    <img src="./images/icons/ico-backArrow.svg" alt="back arrow icon">
+                    수강신청
+                </button>
+                <button class="close-btn">
+                    <img src="./images/icons/ico-closeBlack.svg" alt="close icon">
+                </button>
+            </div>
+            <div class="list">
+                <button class="">초등
+                    <img src="./images/icons/ico-rightBlueArrow.svg" alt="select icon">
+                </button>
+                <ul>
+                    <li><a href="#">문학</a></li>
+                    <li><a href="#">창의</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">미술</a></li>
+                    <li><a href="#">외국어문화</a></li>
+                    <li><a href="#">코딩</a></li>
+                    <li><a href="#">특수체육</a></li>
+                    <li><a href="#">체육</a></li>
+                    <li><a href="#">가족체육</a></li>
+                    <li><a href="#">수학</a></li>
+                    <li><a href="#">영어</a></li>
+                    <li><a href="#">논리</a></li>
+                    <li><a href="#">천문</a></li>
+                    <li><a href="#">독서</a></li>
+                    <li><a href="#">뮤지컬</a></li>
+                </ul>
+                <button>중등
+                    <img src="./images/icons/ico-rightBlueArrow.svg" alt="select icon">
+                </button>
+                <ul>
+                    <li><a href="#">문학</a></li>
+                    <li><a href="#">창의</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">미술</a></li>
+                    <li><a href="#">외국어문화</a></li>
+                    <li><a href="#">코딩</a></li>
+                    <li><a href="#">특수체육</a></li>
+                    <li><a href="#">체육</a></li>
+                    <li><a href="#">가족체육</a></li>
+                    <li><a href="#">수학</a></li>
+                </ul>
+                <button>초중등
+                    <img src="./images/icons/ico-rightBlueArrow.svg" alt="select icon">
+                </button>
+                <ul>
+                    <li><a href="#">문학</a></li>
+                    <li><a href="#">창의</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">미술</a></li>
+                    <li><a href="#">외국어문화</a></li>
+                </ul>
+                <button>학부모
+                    <img src="./images/icons/ico-rightBlueArrow.svg" alt="select icon">
+                </button>
+                <ul>
+                    <li><a href="#">문학</a></li>
+                    <li><a href="#">창의</a></li>
+                    <li><a href="#">역사</a></li>
+                    <li><a href="#">에세이</a></li>
+                    <li><a href="#">미술</a></li>
+                    <li><a href="#">외국어문화</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="close-btn">
+            <img src="./images/icons/ico-close3.svg" alt="close icon">
+        </button>
+    </div>
+    <div class="dim"></div>
+    
+
+    <!-- script link -->
+    <script src="./js/searchOpen.js"></script>
+    <script src="./js/menuOpen.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/footerSelect.js"></script>
+    <script src="./js/select.js"></script>
+</body>
+</html>
