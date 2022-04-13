@@ -2623,8 +2623,8 @@ section .inner.st3{
 }
 
 .plus-ico{
-    width: 12px !important;
-    height: 12px !important;
+    width: 14px !important;
+    height: 14px !important;
     background: url("../images/icons/ico-plus.svg") no-repeat center / cover !important;
     display: block !important;
     position: static !important;
