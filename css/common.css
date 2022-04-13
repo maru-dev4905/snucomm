@@ -2400,6 +2400,9 @@ section .inner.st3{
 .blue-strok-btn:hover i{
     background: url("../images/icons/ico-rightWhiteArrow2.svg") no-repeat center / cover;
 }
+.blue-strok-btn:hover i.diagonal-ico{
+    background: url("../images/icons/ico-blueDiagonalArrow2.svg") no-repeat center / cover !important;
+}
 
 
 
@@ -2522,6 +2525,15 @@ section .inner.st3{
 .s-banner em{
     font-family: "Montserrat";
 }
+.s-banner h3{
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.5;
+}
+.s-banner h3 span{
+    font-weight: 600;
+}
 
 /* small banner */
 
@@ -2572,6 +2584,51 @@ section .inner.st3{
     display: block;
     position: static;
     transform: none;
+}
+
+.download-ico{
+    width: 16px !important;
+    height: 16px !important;
+    background: url("../images/icons/ico-download.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.diagonal-ico{
+    width: 22px !important;
+    height: 22px !important;
+    background: url("../images/icons/ico-blueDiagonalArrow.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.address-ico{
+    width: 26px !important;
+    height: 26px !important;
+    background: url("../images/icons/ico-address.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.rightBlackArrow-ico{
+    width: 6.5px !important;
+    height: 12px !important;
+    background: url("../images/icons/ico-rightBlackArrow2.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.plus-ico{
+    width: 12px !important;
+    height: 12px !important;
+    background: url("../images/icons/ico-plus.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
 }
 
 /* icon */

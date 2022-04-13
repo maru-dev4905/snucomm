@@ -593,13 +593,19 @@
 }
 .about .sec-text h2 span{
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
     color: #111;
     margin: 0;
     display: inline-block;
 }
+.about .sec-text p{
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+    margin-top: 40px;
+}
 
-.about section.shape{
+.about .shape-sec{
     background-color: #F9F9F9;
     padding-bottom: 620px;
     position: relative;
@@ -624,6 +630,7 @@
 .shape-cont .shape{
     position: relative;
     height: 100%;
+    transition: 0.3s ease;
 }
 .shape-cont .shape:nth-child(1){
     width: 754px;
@@ -656,11 +663,17 @@
     margin-left: -36px;
     z-index: 5;
 }
-.shape-cont .shape .content{
+.shape-cont .shape .content,
+.shape-cont .shape .hov-content{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
+    transition: 0.3s ease;
+}
+.shape-cont .shape .hov-content{
+    opacity: 0;
+    visibility: hidden;
 }
 .shape-cont .shape .content h3{
     font-size: 25px;
@@ -669,20 +682,44 @@
     font-family: "Montserrat";
     font-weight: 600;
 }
+.shape-cont .shape .hov-content h3{
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.shape-cont .shape .hov-content h3:before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100%;
+
+}
 .shape-cont .shape .content h4{
     font-size: 22px;
     font-family: "Noto Sans Kr";
     font-weight: 400;
     color: #fff;
 }
-.shape-cont .shape:nth-child(1) .content{
+.shape-cont .shape:nth-child(1) .content,
+.shape-cont .shape:nth-child(1) .hov-content{
     right: 110px;
 }
-.shape-cont .shape:nth-child(2) .content{
+.shape-cont .shape:nth-child(2) .content,
+.shape-cont .shape:nth-child(2) .hov-content{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.shape-cont .shape:nth-child(3) .content{
+.shape-cont .shape:nth-child(3) .content,
+.shape-cont .shape:nth-child(3) .hov-content{
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -690,20 +727,178 @@
 .shape-cont .shape:nth-child(3) .content h4{
     color: #666;
 }
-.shape-cont .shape:nth-child(4) .content{
+.shape-cont .shape:nth-child(3) .hov-content h3,
+.shape-cont .shape:nth-child(3) .hov-content p{
+    color: #404040;
+}
+.shape-cont .shape:nth-child(3) .hov-content h3::before{
+    background-color: #404040;
+}
+.shape-cont .shape:nth-child(4) .content,
+.shape-cont .shape:nth-child(4) .hov-content{
     display: none;
 }
-
+.shape-cont .shape .hov-content p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.75;
+    font-weight: 400;
+}
+.shape-cont .shape:nth-child(1) .hov-content p{
+    max-width: 270px;
+}
+.shape-cont .shape:nth-child(2) .hov-content p{
+    min-width: 240px;
+}
+.shape-cont .shape:nth-child(3) .hov-content p{
+    min-width: 410px;
+}
+.shape-cont .shape:hover{
+    opacity: 1;
+}
+.shape-cont .shape:hover .content{
+    opacity: 0;
+    visibility: hidden;
+}
+.shape-cont .shape:hover .hov-content{
+    opacity: 1;
+    visibility: visible;
+}
 
 
 .about .category .inner{
     max-width: 1180px;
+    padding-top: 0;
+    padding-bottom: 140px;
 }
 .about .category-list{
     gap: 20px;
 }
 .about .category-list > li{
     height: 450px;
+}
+
+
+
+.identity-list{
+    margin-top: 116px;
+    margin-left: auto;
+    display: block;
+    width: 786px;
+}
+.identity-list h3{
+    font-size: 28px;
+    color: #222;
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+.identity-list ul{
+    display: flex;
+    gap: 63px;
+}
+.identity-list ul li{
+    flex: 1;
+}
+.identity-list ul li button{
+    width: 100%;
+}
+.identity-list ul li .bg{
+    height: 163px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.identity-list ul li .col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.identity-list ul li .col span{
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #121212;
+}
+
+
+.about .s-banner{
+    height: 700px;
+    margin-top: 110px;
+}
+.about .s-banner p{
+    text-align: left;
+    font-size: 16px;
+    color: #0EBCF6;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.about .s-banner a{
+    margin-top: 70px;
+}
+
+
+.map{
+    background-color: #F9F9F9;
+    padding-bottom: 140px;
+}
+.map-tab{
+    margin-top: 68px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.map-tab button{
+    font-size: 22px;
+    font-weight: 500;
+    color: #aaa;
+    position: relative;
+    transition: 0.3s ease;
+}
+.map-tab button:hover{
+    opacity: 0.7;
+}
+.map-tab button.current{
+    color: #0EBCF6;
+}
+.map-tab button.current::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0EBCF6;
+    display: block;
+    position: absolute;
+}
+
+.map-tab-cont{
+    position: relative;
+    height: 800px;
+}
+.map-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.map-content a{
+    position: absolute;
+    right: 0;
+    top: -90px;
+}
+.map-img{
+    width: 100%;
+    height: 592px;
+    background-color: #aaa;
+    margin-bottom: 55px;
 }
 
 /* about */
