@@ -8,6 +8,9 @@
     grid-column-gap: 55px;
     grid-row-gap:  75px;
 }
+.list .fc-blue{
+    color: #0EBCF6 !important;
+}
 .list ul{
     border-top: 1px solid #121212;
 }
@@ -232,7 +235,8 @@
 .qna .list ul{
     margin-bottom: 20px;
 }
-.qna .list li a{
+.qna .list li a,
+.reference .list li a{
     height: max-content;
     padding: 30px 0;
     flex-direction: column;
@@ -253,26 +257,67 @@
     align-items: center;
     gap: 20px;
 }
-.qna .list li a .title h3{
+.reference .list li a .title{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.qna .list li a .title h3,
+.reference .list li a .title h3{
     font-size: 18px;
     font-weight: 600;
     font-family: "Noto Sans Kr";
     color: #121212;
 }
-.qna .list li a .title span{
+.qna .list li a .title span,
+.reference .list li a span{
     font-size: 14px;
     font-weight: 400;
     font-family: "Noto Sans Kr";
     color: #0EBCF6;
 }
-.qna .date{
+.reference .list li a span{
+    margin-bottom: 10px;
+    display: block;
+}
+.reference .list li a .user span{
+    margin-bottom: 0;
+    color: #121212;
+}
+.reference .list li a .date{
     height: auto;
     width: max-content;
     border-right: none;
     display: flex;
     align-items: center;
 }
-.qna .date span{
+.reference .list li a .date span{
+    color: #c4c4c4;
+    font-size: 14px;
+}
+.reference .list li a .col{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.reference .list li a .desc{
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+}
+.qna li .date{
+    height: auto;
+    width: max-content;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.qna .date span,
+.reference .date span{
     font-size: 14px;
     font-family: "Noto Sans Kr";
     font-weight: 400;
@@ -296,25 +341,29 @@
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.qna .user{
+.qna .user,
+.reference .user{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.qna .user-img{
+.qna .user-img,
+.reference .user-img{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 32px;
     height: 32px;
 }
-.qna .user span{
+.qna .user span,
+.reference .user span{
     font-size: 14px;
     font-family: "Noto Sans Kr";
     font-weight: 400;
     color: #121212;
 }
-.qna .sub{
+.qna .sub,
+.reference .sub{
     display: flex;
     gap: 12px;
     font-size: 14px;
@@ -323,40 +372,58 @@
     color: #4c4c4c;
 }
 .qna .comment,
-.qna .inquiry{
+.qna .inquiry,
+.reference .comment,
+.reference .inquiry{
     display: flex;
     gap: 4px;
 }
 .qna .comment span,
-.qna .inquiry span{
+.qna .inquiry span,
+.reference .comment span,
+.reference .inquiry span{
     font-family: "Montserrat";
 }
 .qna .comment span{
     color: #0EBCF6;
 }
+.reference .sub .inquiry span{
+    color: #4C4C4C;
+}
+.reference.single .sub .inquiry ,
+.reference.single .sub .inquiry span{
+    color: #aaa;
+}
 
 
-.qna.single .page-title{
+.qna.single .page-title,
+.reference.single .page-title{
     margin-bottom: 30px;
 }
-.qna.single .page-title p{
+.qna.single .page-title p,
+.reference.single .page-title p{
     font-size: 14px;
 }
-.qna.single .inquiry{
+.qna.single .inquiry,
+.reference.single .inquiry{
     color: #aaa;
     font-weight: 400;
 } 
-.qna.single section.desc{
+.qna.single section.desc,
+.reference.single section.desc{
     margin-top: 40px;
     margin-bottom: 0;
 }
-.qna.single section.desc .inner{
+.qna.single section.desc .inner,
+.reference.single section.desc .inner{
     border-top: 1px solid #eee;
     padding-top: 40px;
     padding-bottom: 40px;
     margin-bottom: 40px;
 }
-
+.reference.single .desc .inner{
+    border-bottom: none;
+}
 
 
 
@@ -376,6 +443,11 @@
 .comment-list{
     margin-bottom: 100px;
 }
+.comment-list .comment-default-block{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    height: 100%;
+}
 .comment-list .comment-total{
     display: flex;
     align-items: center;
@@ -390,7 +462,6 @@
 }
 .comment-list ul{
     min-height: 268px;
-    border-bottom: 1px solid #eee;
     margin-bottom: 100px;
     position: relative;
 }
@@ -403,6 +474,7 @@
     margin-top: 24px;
     overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 12px;
 }
 .add-comment-field input{
     border: 1px solid #e9e9e9;
@@ -412,6 +484,7 @@
     outline: none;
     transition: 0.3s ease;
     border-radius: 10px;
+    padding-right: 100px;
 }
 .add-comment-field input:focus{
     border: 1px solid #bbbbbb;
@@ -443,6 +516,10 @@
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .comment-default-block i{
     margin: 0 auto;
@@ -454,8 +531,97 @@
 }
 
 
-
-
+.comment-list li{
+    padding: 20px 0;
+}
+.comment-list li .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.comment-list li .user .profile-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.comment-list li .user .name{
+    font-size: 14px;
+    font-weight: 500;
+    color: #121212;
+}
+.comment-list li .user .date{
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaa;
+}
+.comment-list li .user .date em{
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.comment-list li p.desc{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #121212;
+    margin-bottom: 13px;
+}
+.comment-list li .reply{
+    font-size: 12px;
+    color: #121212;
+    border-radius: 4px;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    background-color: transparent;
+    width: 50px;
+    height: 28px;
+}
+.comment-list .reply-comment-block,
+.comment-list .reply-field-block{
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding: 22px 36px 28px 36px;
+    position: relative;
+}
+.comment-list .reply-field-block .add-comment-field{
+    height: 40px;
+}
+.comment-list .reply-field-block .add-comment-field input{
+    font-size: 14px;
+    padding-right: 100px;
+}
+.comment-list .reply-field-block .add-comment-field button{
+    font-size: 14px;
+}
+.comment-list .reply-comment-block + .reply-comment-block,
+.comment-list .reply-comment-block + .reply-field-block{
+    margin-top: 20px;
+}
+.comment-list .reply-comment-block:before{
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-bottom: 1.5px solid #C4C4C4;
+    border-left: 1.5px solid #C4C4C4;
+    display: block;
+}
+.comment-list .edit-btn,
+.comment-list .remove-btn{
+    color: #0EBCF6;
+}
 
 
 .search-cont{
@@ -463,7 +629,7 @@
 }
 .search-cont .search-field{
     margin-top: 185px;
-    margin-bottom: 63px;
+    margin-bottom: 70px;
 }
 .search-cont .search-field .col{
     position: relative;
@@ -494,7 +660,8 @@
 .no-result i.noResult-ico{
     margin: 0 auto 10px;
 }
-.no-result h2{
+.no-result h2,
+.result h2{
     font-size: 30px;
     font-weight: 300;
     color: #121212;
@@ -502,7 +669,8 @@
     margin-bottom: 55px;
     font-family: "Noto Sans Kr";
 }
-.no-result h2 span{
+.no-result h2 span,
+.result h2 span{
     font-weight: 600;
     color: #0EBCF6;
 }
@@ -512,6 +680,12 @@
     font-weight: 300;
     color: #aaa;
     text-align: center;
+}
+.search-cont h2{
+    margin-bottom: 90px;
+}
+.search-cont h2 span.num{
+    font-family: "Montserrat";
 }
 
 
@@ -609,6 +783,7 @@
     background-color: #F9F9F9;
     padding-bottom: 620px;
     position: relative;
+    overflow: hidden;
 }
 .shape-cont{
     width: max-content;
@@ -877,6 +1052,7 @@
     background-color: #0EBCF6;
     display: block;
     position: absolute;
+    transition: 0.3s ease;
 }
 
 .map-tab-cont{
@@ -888,6 +1064,14 @@
     top: 0;
     left: 0;
     width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s 0.15s ease;
+}
+.map-content.current{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s 0.35s ease;
 }
 .map-content a{
     position: absolute;
@@ -977,3 +1161,292 @@
 }
 
 /* about */
+
+
+
+.etc-btn{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.etc-btn span{
+    width: 4px;
+    height: 4px;
+    background-color: #aaa;
+    border-radius: 100%;
+    margin-top: 6px;
+    display: block;
+}
+.etc-btn span:first-child{
+    margin-top: 0;
+}
+.etc-list{
+    position: absolute;
+    right: 0;
+    bottom: calc(-100% - 20px);
+    width: max-content;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #E9E9E9;
+    padding: 18px 20px;
+    background-color: #fff;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.etc-list button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 14px;
+    transition: 0.3s ease;
+}
+.etc-list li:last-child button{
+    margin-bottom: 0;
+}
+.etc-list li button:hover{
+    opacity: 0.7;
+}
+.etc-btn.show + .etc-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+.reference .list li a{
+    /* height: 217px; */
+    padding: 30px 0;
+}
+.reference .list li a:hover{
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.reference .list ul{
+    margin-bottom: 20px;
+}
+
+.list-search-field{
+    width: 348px;
+    height: 56px;
+    border-radius: 56px;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -28px;
+}
+.list-search-field .select{
+    width: 100px;
+}
+.list-search-field .select-current{
+    border: none;
+    width: 100px;
+    border-radius: 56px 0 0 56px;
+    height: max-content;
+    gap: 10px;
+}
+.list-search-field .select-list{
+    border-top: 1px solid #E9E9E9;
+}
+.list-search-field input{
+    width: 200px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #000;
+}
+.list-search-field input::placeholder{
+    color: #999;
+}
+.list-search-field .search-btn{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url("../images/icons/ico-searchBlue.svg") no-repeat center / cover;
+    display: block;
+}
+
+
+.download-file{
+    width: 100%;
+}
+.download-file .inner{
+    padding-bottom: 50px;
+    margin-bottom: 66px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.download-file a{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9F9F9;
+    height: 60px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.download-file + a{
+    margin-bottom: 100px;
+}
+
+
+
+
+.search-cont.result .btn-group ul{
+    display: flex;
+    height: 67px;
+    border-radius: 67px;
+    border: 1px solid #ddd;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+.search-cont.result .btn-group ul li{
+    flex: 1;
+    height: 100%;
+}
+.search-cont.result .btn-group ul button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #C4C4C4;
+    font-weight: 500;
+    gap: 5px;
+    transition: 0.3s ease;
+    border-radius: 67px;
+    position: relative;
+}
+.search-cont.result .btn-group ul button em{
+    font-family: "Montserrat";
+    margin-top: 3.4px;
+}
+.search-cont.result .btn-group ul button.current{
+    color: #fff;
+    background-color: #0EBCF6;
+}
+.search-cont.result .btn-group ul li:last-child button::after,
+.search-cont.result .btn-group ul button.current::after{
+    display: none;
+}
+.search-cont.result .btn-group ul button::after{
+    content: "";
+    position: absolute;
+    background-color: #ddd;
+    height: 17px;
+    width: 1px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.search-cont.result .list{
+    margin-bottom: 160px;
+}
+.search-cont.result .list-title{
+    width: 100%;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #000;
+}
+.search-cont.result .list-title h3{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.search-cont.result .list-title h3 span{
+    color: #0EBCF6;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.search-cont.result .list-title a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 13px;
+}
+.search-cont.result .list-title a img{
+    margin-top: 1px;
+}
+
+.search-cont.result .list li a{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 0;
+    height: max-content;
+}
+.search-cont.result .list li a:hover{
+    background-color: #fff;
+    border-bottom: 1px solid #e9e9e9;
+}
+.search-cont.result .list li a span{
+    color: #0EBCF6;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.search-cont.result .list li a h3{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 4px;
+}
+.search-cont.result .list li p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #666;
+    width: 1050px;
+    max-height:50px;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient:vertical; 
+    -webkit-line-clamp:3;
+    white-space: nowrap;
+}
+.search-cont.result .list li p em{
+    color: #0EBCF6;
+}
+.search-cont.result .list li a h3 em{
+    color: #0EBCF6;
+}
+.search-cont.result .list li .date{
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    border: none;
+}
+.search-cont.result .list li .date span{
+    color: #aaa;
+    font-family: "Montserrat";
+    font-weight: 300;
+}
