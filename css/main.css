@@ -430,6 +430,7 @@ main.snuapp{
 }
 .snuapp .about-card li .back{
     background-color: #60DF7C;
+    position: static;
 }
 .about-card li .back {
     position: absolute;

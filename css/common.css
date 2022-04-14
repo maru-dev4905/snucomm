@@ -238,25 +238,33 @@ header .logo-list li button:hover{
 header .gnb{
     margin-right: auto;
     margin-left: 130px;
+    height: 100%;
 }
 header .gnb ul{
     display: flex;
     align-items: center;
     gap: 75px;
+    height: 100%;
 }
 header .gnb ul li{
+    position: relative;
+    height: 100%;
+}
+header .gnb ul li a{
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-size: 15px;
     font-weight: 600;
     transition: 0.35s ease;
-    position: relative;
 }
-header .gnb ul li:hover{
+header .gnb ul li:hover > a{
     opacity: 0.6;
 }
 header .gnb ul li.active{
     color: #0EBCF6;
 }
-header .gnb ul li.active::before{
+header .gnb ul.depth1 > li.active::before{
     content: "";
     position: absolute;
     top: -6px;
@@ -265,6 +273,59 @@ header .gnb ul li.active::before{
     height: 5px;
     background-color: #0EBCF6;
 }
+header .gnb ul.depth1 > li > a:hover + ul.depth2{
+    opacity: 1;
+    visibility: visible;
+}
+header .gnb ul.depth2{
+    gap: 46px;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+header .gnb ul.depth2 li a{
+    height: max-content;
+}
+header .gnb ul.depth2 li{
+    width: max-content;
+    padding: 0 37px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .gnb ul.depth2 > li.active{
+    border-bottom: 2px solid #0EBCF6;
+    color: #0EBCF6;
+}
+header .gnb ul.depth2 > li.active > a{
+    position: relative;
+}
+header .gnb ul.depth2 > li.active > a::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: #0EBCF6;
+    position: absolute;
+    right: -8px;
+    top: -5px;
+}
+
 header .sub-menu{
     display: flex;
     align-items: center;
@@ -1372,10 +1433,12 @@ section .inner.st3{
     z-index: 10;
 }
 .menu-box ul.depth3{
-    /* position: absolute; */
-    /* left: 100%; */
+    position: absolute;
+    right: 0;
+    top: 0;
     display: grid;
-    grid-template-columns: repeat(4, 70px);
+    grid-template-columns: repeat(4, 80px);
+    text-align: center;
 }
 .menu-box ul.depth3 a:hover::after{
     display: none;
@@ -1385,6 +1448,7 @@ section .inner.st3{
     grid-template-columns: max-content max-content;
     grid-column-gap: 37px; */
     width: 333px;
+    width: 450px;
     height: 140px;
     display: block;
 }
@@ -1407,12 +1471,12 @@ section .inner.st3{
     z-index: 0;
     transition: 0.3s ease;
 }
-.menu-box > ul > li:nth-child(2) > a + ul > li:hover{
+/* .menu-box > ul > li:nth-child(2) > a + ul > li:hover{
     height: 140px;
-}
-.menu-box > ul > li:nth-child(2) > a + ul > li:first-child:hover{
+} */
+/* .menu-box > ul > li:nth-child(2) > a + ul > li:first-child:hover{
     height: 38px;
-}
+} */
 .menu-box > ul > li:nth-child(2) > a + ul li:hover > a{
     opacity: 1;
 }
@@ -2666,5 +2730,17 @@ section .inner.st3{
     position: static !important;
     transform: none !important;
 }
+
+.select-ico{
+    width: 28px !important;
+    height: 28px !important;
+    background: url("../images/icons/ico-selectArrow3.svg") no-repeat center / cover !important;
+    display: block !important;
+    position: static !important;
+    transform: rotate(180deg) !important;
+    transition: 0.3s ease;
+}
+
+
 
 /* icon */
